@@ -1,0 +1,10 @@
+H 2141964 11 3 0 3 3 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 6 ./work
+D 18 ./work.lfsr16(rtl) IEc>30Mbc^0D:8:?LK1Rj0 1 1
+D 22 ./work.rca(behavioral) ^6[21_XLJiHLH20`BQA7a3 0 1
+D 18 ./work.tbrca(test) Y[BU4bi83n`<P=lZ^d6ab3 2 1
+2 0  0 JPzB_OB5O0iQBk:6SlQ2U3 2 2 1
+2 0  0 0>ETXc84=WoKYoan7W]D72 0 0 1
+2 0  0 XbASO5nh?1>;bP02=cI^W2 1 1 1

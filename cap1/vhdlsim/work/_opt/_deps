@@ -1,0 +1,14 @@
+H 2141964 11 3 0 5 5 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 6 ./work
+D 16 ./work.constants b=@60QTLViN;e@RYl>n6`3 0 1
+D 21 ./work.fa(behavioral) 0BW[?zlj6f6@[Koi_]Z?]0 1 1
+D 18 ./work.lfsr16(rtl) IEc>30Mbc^0D:8:?LK1Rj0 2 1
+D 30 ./work.rca_generic(structural) HDWMR[PIbXUPB:]Ck=D=F2 3 1
+D 26 ./work.tbrca_generic(test) mVDWW9O]2a^l`hmnGE6O>1 4 1
+2 0  0 JU2YQFA`74oPk`<<JE9[J0 0 0 1
+2 0  0 XbASO5nh?1>;bP02=cI^W2 2 2 1
+2 0  0 ^mak_F2KV3elI0A9=:oL?3 1 1 1
+2 0  1 KZQFc3>fNUDPZC5cZfBi71 4 4 1
+2 0  1 o1gcE?H^R3Ai4DL9EZmEB0 3 3 1
