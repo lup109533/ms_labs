@@ -1,10 +1,12 @@
-H 2141964 11 3 0 3 3 0 0 0 0
+H 2141964 11 3 0 4 4 0 0 0 0
 L 4 ieee 19 $MODEL_TECH/../ieee
 L 3 std 18 $MODEL_TECH/../std
 L 4 work 6 ./work
-D 16 ./work.constants b=@60QTLViN;e@RYl>n6`3 0 1
-D 20 ./work.fd_gen(pluto) 5<Iez_R:LRMfdZ;?@nXBi2 1 1
-D 21 ./work.tbfd_gen(test) 8HWz<P6YJbb>6<UGgRQcR1 2 1
-2 0  0 JU2YQFA`74oPk`<<JE9[J0 0 0 1
-2 0  1 eMJRK6PC=^R8^>gE9@oWD1 1 1 1
-2 0  1 YaKGlA3VDDVB5fa5[]A<>1 2 2 1
+D 20 ./work.alu(behavior) dM`6PMcPNnLe]hdeDMRz63 2 1
+D 16 ./work.alu_types UANB;G>K[=S;Pl8mFhLnJ3 0 1
+D 16 ./work.constants b=@60QTLViN;e@RYl>n6`3 1 1
+D 18 ./work.tbalu(test) o0PmdFE;aQABZ_KA>J0Wj0 3 1
+2 0  0 5TYF[4OOO=Wb19EE=62QA3 0 0 1
+2 0  0 JU2YQFA`74oPk`<<JE9[J0 1 1 1
+2 0  1 jFRaz;mKEegJ]T_zFRBe12 3 3 1
+2 0  1 IJGK7FdY:R`<YD@GS;`^72 2 2 1

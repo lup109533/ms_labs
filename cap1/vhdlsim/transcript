@@ -8,91 +8,117 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-vcom acc.vhd
+vcom alu.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
 # -- Loading package constants
-# -- Compiling entity acc
-# -- Compiling architecture structural of acc
-vcom ACC_tb.vhd
-# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
-# -- Loading package standard
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package std_logic_unsigned
-# -- Loading package constants
-# -- Compiling entity acc_tb
-# -- Compiling architecture test of acc_tb
-# ** Error: ACC_tb.vhd(59): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(59): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(60): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(60): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(67): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(67): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(68): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(68): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(75): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(75): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(76): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(76): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(83): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(83): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(84): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(84): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(91): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(91): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(92): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(92): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(99): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(99): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(100): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(100): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(107): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(107): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(108): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(108): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(117): VHDL Compiler exiting
+# ** Error: (vcom-11) Could not find ./work.alu_type.
+# ** Error: alu.vhd(6): (vcom-1195) Cannot find expanded name: 'work.alu_type'.
+# ** Error: alu.vhd(6): Unknown record element "alu_type".
+# ** Error: alu.vhd(8): VHDL Compiler exiting
 # /software/mentor/modelsim_6.2g/linux/vcom failed.
-vcom ACC_tb.vhd
+vcom alu_type.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Compiling package alu_types
+# ** Error: alu_type.vhd(3): Labels do not match: 'alu_types' and 'types'.
+# ** Error: alu_type.vhd(3): VHDL Compiler exiting
+# /software/mentor/modelsim_6.2g/linux/vcom failed.
+vcom alu_type.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Compiling package alu_types
+vcom alu.vhd
 # Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
 # -- Loading package standard
 # -- Loading package std_logic_1164
 # -- Loading package std_logic_arith
 # -- Loading package std_logic_unsigned
 # -- Loading package constants
-# -- Compiling entity acc_tb
-# -- Compiling architecture test of acc_tb
-# ** Error: ACC_tb.vhd(39): (vcom-1027) Number of positional association elements (1) exceeds number of formals (0).
-# ** Error: ACC_tb.vhd(60): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(60): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(61): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(61): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(68): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(68): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(69): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(69): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(76): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(76): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(77): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(77): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(84): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(84): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(85): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(85): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(92): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(92): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(93): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(93): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(100): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(100): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(101): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(101): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(108): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(108): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(109): (vcom-1167) Index value -28 is out of std.standard.natural range 0 to 2147483647.
-# ** Error: ACC_tb.vhd(109): Array length is 4; string literal length is 32.
-# ** Error: ACC_tb.vhd(118): VHDL Compiler exiting
+# ** Error: (vcom-11) Could not find ./work.alu_type.
+# ** Error: alu.vhd(6): (vcom-1195) Cannot find expanded name: 'work.alu_type'.
+# ** Error: alu.vhd(6): Unknown record element "alu_type".
+# ** Error: alu.vhd(8): VHDL Compiler exiting
 # /software/mentor/modelsim_6.2g/linux/vcom failed.
+vcom alu.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package constants
+# -- Loading package alu_types
+# -- Compiling entity alu
+# -- Compiling architecture behavior of alu
+# ** Error: alu.vhd(31): (vcom-1136) Unknown identifier "daat2".
+# ** Error: alu.vhd(31): Type error resolving infix expression "-" as type ieee.std_logic_1164.std_logic_vector.
+# ** Error: alu.vhd(44): VHDL Compiler exiting
+# /software/mentor/modelsim_6.2g/linux/vcom failed.
+vcom alu.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package constants
+# -- Loading package alu_types
+# -- Compiling entity alu
+# -- Compiling architecture behavior of alu
+# -- Compiling configuration cfg_alu_behavioral
+# -- Loading entity alu
+# -- Loading architecture behavior of alu
+vcom tb_alu.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package constants
+# ** Error: (vcom-11) Could not find ./work.alu_type.
+# ** Error: tb_alu.vhd(7): (vcom-1195) Cannot find expanded name: 'work.alu_type'.
+# ** Error: tb_alu.vhd(7): Unknown record element "alu_type".
+# ** Error: tb_alu.vhd(9): VHDL Compiler exiting
+# /software/mentor/modelsim_6.2g/linux/vcom failed.
+vcom tb_alu.vhd
+# Model Technology ModelSim SE vcom 6.2g Compiler 2007.02 Feb 21 2007
+# -- Loading package standard
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_unsigned
+# -- Loading package constants
+# -- Loading package alu_types
+# -- Compiling entity tbalu
+# -- Compiling architecture test of tbalu
+# -- Compiling configuration alu_test
+# -- Loading entity tbalu
+# -- Loading architecture test of tbalu
+# -- Loading entity alu
+# -- Loading configuration cfg_alu_behavioral
+vsim work.tbalu
+# vsim work.tbalu 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_arith(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_unsigned(body)
+# Loading work.constants
+# Loading work.alu_types
+# Loading work.tbalu(test)#1
+# Loading work.alu(behavior)#1
+add wave *
+run
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tbalu/u1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tbalu/u1
+run
+run
+run
+run
+radix decimal
+# decimal
+radix binary
+# binary

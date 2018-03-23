@@ -3,8 +3,8 @@ use IEEE.std_logic_1164.all; --  libreria IEEE con definizione tipi standard log
 use WORK.constants.all; -- libreria WORK user-defined
 
 entity MUX21_GENERIC is
-	Generic (N: integer:= numBit;
-		 DELAY_MUX: Time:= tp_mux);
+	Generic (N: integer:= numBit);
+		 --DELAY_MUX: Time:= tp_mux);
 	Port (	A:	In	std_logic_vector(N-1 downto 0) ;
 		B:	In	std_logic_vector(N-1 downto 0);
 		SEL:	In	std_logic;
@@ -17,9 +17,9 @@ begin
 	pmux: process(A,B,SEL)
 	begin
 		if SEL = '1' then
-			Y <= A after DELAY_MUX;
+			Y <= A;-- after DELAY_MUX;
 		else
-			Y <= B after DELAY_MUX;
+			Y <= B;-- after DELAY_MUX;
 		end if;
 
 	end process;

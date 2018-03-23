@@ -9,14 +9,14 @@ o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
 T_opt1
-VLNJh::XI74V92S>noeSm=0
-06 8 4 ./work tbfd_gen test 1
+VVkU36J?OQ:9ea;T2c=ZJT0
+06 5 4 ./work tbalu test 1
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
 T_opt2
-Vnk0KK0QA9QoKl^Oi<zlg^1
-06 5 4 ./work tbrca test 0
+Vk3IaQKFmX[2fhRG[MYdQ91
+06 17 4 ./work acc_behavioral_tb test 1
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
@@ -50,6 +50,66 @@ M3 ieee std_logic_unsigned
 M2 ieee std_logic_arith
 M1 work constants
 tExplicit 1
+Eacc_behavioral
+w1521718372
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8acc_behavioral.vhd
+Facc_behavioral.vhd
+l0
+L6
+ViOhWj[OY651dh_dGRCYKP3
+OE;C;6.2g;35
+32
+tExplicit 1
+Abehavioral
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work acc_behavioral iOhWj[OY651dh_dGRCYKP3
+l26
+L20
+VaZ2iiWNeK1f]mfP^;CDAR2
+OE;C;6.2g;35
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work constants
+tExplicit 1
+Eacc_behavioral_tb
+w1521718480
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8ACC_behavioral_tb.vhd
+FACC_behavioral_tb.vhd
+l0
+L9
+VReD0TI6;G6a88CNo]G^KA0
+OE;C;6.2g;35
+32
+tExplicit 1
+Atest
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work acc_behavioral_tb ReD0TI6;G6a88CNo]G^KA0
+l38
+L15
+V>GI`?6H;UNE8n2;OkA>nO3
+OE;C;6.2g;35
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work constants
+tExplicit 1
 Eacc_tb
 w1521713772
 DP work constants b=@60QTLViN;e@RYl>n6`3
@@ -63,6 +123,99 @@ L9
 VDFbjiC1V=1e7A[XPioE<f3
 OE;C;6.2g;35
 32
+tExplicit 1
+Ealu
+w1521744826
+DP work alu_types UANB;G>K[=S;Pl8mFhLnJ3
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8alu.vhd
+Falu.vhd
+l0
+L8
+VcK8g]DMlM=YNkZ^`:nQHR0
+OE;C;6.2g;35
+32
+tExplicit 1
+Abehavior
+DP work alu_types UANB;G>K[=S;Pl8mFhLnJ3
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work alu cK8g]DMlM=YNkZ^`:nQHR0
+l20
+L15
+VdM`6PMcPNnLe]hdeDMRz63
+OE;C;6.2g;35
+32
+M5 ieee std_logic_1164
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 work constants
+M1 work alu_types
+tExplicit 1
+Calu_test
+atest
+etbalu
+DE work alu cK8g]DMlM=YNkZ^`:nQHR0
+DC work cfg_alu_behavioral [N0XeIg_ec28>07bPX7WE0
+DA work tbalu test o0PmdFE;aQABZ_KA>J0Wj0
+DP work alu_types UANB;G>K[=S;Pl8mFhLnJ3
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tbalu n9<NS<D[WXdk^zQX91zRQ2
+w1521744873
+8tb_alu.vhd
+Ftb_alu.vhd
+l0
+L55
+V4<4EbiR[dALJ[AmcOXNSi3
+OE;C;6.2g;35
+32
+M5 ieee std_logic_1164
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 work constants
+M1 work alu_types
+tExplicit 1
+Palu_types
+w1521744731
+8alu_type.vhd
+Falu_type.vhd
+l0
+L1
+VUANB;G>K[=S;Pl8mFhLnJ3
+OE;C;6.2g;35
+32
+tExplicit 1
+Ccfg_alu_behavioral
+abehavior
+ealu
+DA work alu behavior dM`6PMcPNnLe]hdeDMRz63
+DP work alu_types UANB;G>K[=S;Pl8mFhLnJ3
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work alu cK8g]DMlM=YNkZ^`:nQHR0
+w1521744826
+8alu.vhd
+Falu.vhd
+l0
+L46
+V[N0XeIg_ec28>07bPX7WE0
+OE;C;6.2g;35
+32
+M5 ieee std_logic_1164
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 work constants
+M1 work alu_types
 tExplicit 1
 Ccfg_fa_behavioral
 abehavioral
@@ -713,6 +866,39 @@ M4 ieee std_logic_1164
 M3 ieee numeric_std
 M2 ieee std_logic_unsigned
 M1 ieee std_logic_arith
+tExplicit 1
+Etbalu
+w1521744873
+DP work alu_types UANB;G>K[=S;Pl8mFhLnJ3
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8tb_alu.vhd
+Ftb_alu.vhd
+l0
+L9
+Vn9<NS<D[WXdk^zQX91zRQ2
+OE;C;6.2g;35
+32
+tExplicit 1
+Atest
+DP work alu_types UANB;G>K[=S;Pl8mFhLnJ3
+DP work constants b=@60QTLViN;e@RYl>n6`3
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tbalu n9<NS<D[WXdk^zQX91zRQ2
+l26
+L12
+Vo0PmdFE;aQABZ_KA>J0Wj0
+OE;C;6.2g;35
+32
+M5 ieee std_logic_1164
+M4 ieee std_logic_unsigned
+M3 ieee std_logic_arith
+M2 work constants
+M1 work alu_types
 tExplicit 1
 Etbfd
 w1520693192
