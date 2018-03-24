@@ -1,0 +1,23 @@
+ 
+****************************************
+Report : area
+Design : ALU_N32
+Version: Z-2007.03-SP1
+Date   : Sat Mar 24 17:45:37 2018
+****************************************
+
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:              100
+Number of nets:               453
+Number of cells:              321
+Number of references:          22
+
+Combinational area:       1810.130004
+Noncombinational area:      85.120003
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:          1895.250000
+Total area:                 undefined

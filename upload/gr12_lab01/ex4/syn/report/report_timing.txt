@@ -1,0 +1,163 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+        -sort_by group
+Design : RCA_generic_N32
+Version: Z-2007.03-SP1
+Date   : Sat Mar 24 17:35:02 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B[0] (input port)
+  Endpoint: Co (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RCA_generic_N32    5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  B[0] (in)                                0.00       0.00 f
+  FAI_1/B (FA_0)                           0.00       0.00 f
+  FAI_1/U4/Z (XOR2_X1)                     0.08       0.08 f
+  FAI_1/U3/ZN (AOI22_X1)                   0.06       0.13 r
+  FAI_1/U2/ZN (INV_X1)                     0.03       0.16 f
+  FAI_1/Co (FA_0)                          0.00       0.16 f
+  FAI_2/Ci (FA_31)                         0.00       0.16 f
+  FAI_2/U3/ZN (AOI22_X1)                   0.06       0.22 r
+  FAI_2/U2/ZN (INV_X1)                     0.03       0.25 f
+  FAI_2/Co (FA_31)                         0.00       0.25 f
+  FAI_3/Ci (FA_30)                         0.00       0.25 f
+  FAI_3/U3/ZN (AOI22_X1)                   0.06       0.31 r
+  FAI_3/U2/ZN (INV_X1)                     0.03       0.34 f
+  FAI_3/Co (FA_30)                         0.00       0.34 f
+  FAI_4/Ci (FA_29)                         0.00       0.34 f
+  FAI_4/U3/ZN (AOI22_X1)                   0.06       0.40 r
+  FAI_4/U2/ZN (INV_X1)                     0.03       0.43 f
+  FAI_4/Co (FA_29)                         0.00       0.43 f
+  FAI_5/Ci (FA_28)                         0.00       0.43 f
+  FAI_5/U3/ZN (AOI22_X1)                   0.06       0.49 r
+  FAI_5/U2/ZN (INV_X1)                     0.03       0.52 f
+  FAI_5/Co (FA_28)                         0.00       0.52 f
+  FAI_6/Ci (FA_27)                         0.00       0.52 f
+  FAI_6/U3/ZN (AOI22_X1)                   0.06       0.58 r
+  FAI_6/U2/ZN (INV_X1)                     0.03       0.61 f
+  FAI_6/Co (FA_27)                         0.00       0.61 f
+  FAI_7/Ci (FA_26)                         0.00       0.61 f
+  FAI_7/U3/ZN (AOI22_X1)                   0.06       0.67 r
+  FAI_7/U2/ZN (INV_X1)                     0.03       0.70 f
+  FAI_7/Co (FA_26)                         0.00       0.70 f
+  FAI_8/Ci (FA_25)                         0.00       0.70 f
+  FAI_8/U3/ZN (AOI22_X1)                   0.06       0.76 r
+  FAI_8/U2/ZN (INV_X1)                     0.03       0.79 f
+  FAI_8/Co (FA_25)                         0.00       0.79 f
+  FAI_9/Ci (FA_24)                         0.00       0.79 f
+  FAI_9/U3/ZN (AOI22_X1)                   0.06       0.85 r
+  FAI_9/U2/ZN (INV_X1)                     0.03       0.88 f
+  FAI_9/Co (FA_24)                         0.00       0.88 f
+  FAI_10/Ci (FA_23)                        0.00       0.88 f
+  FAI_10/U3/ZN (AOI22_X1)                  0.06       0.94 r
+  FAI_10/U2/ZN (INV_X1)                    0.03       0.97 f
+  FAI_10/Co (FA_23)                        0.00       0.97 f
+  FAI_11/Ci (FA_22)                        0.00       0.97 f
+  FAI_11/U3/ZN (AOI22_X1)                  0.06       1.03 r
+  FAI_11/U2/ZN (INV_X1)                    0.03       1.06 f
+  FAI_11/Co (FA_22)                        0.00       1.06 f
+  FAI_12/Ci (FA_21)                        0.00       1.06 f
+  FAI_12/U3/ZN (AOI22_X1)                  0.06       1.12 r
+  FAI_12/U2/ZN (INV_X1)                    0.03       1.15 f
+  FAI_12/Co (FA_21)                        0.00       1.15 f
+  FAI_13/Ci (FA_20)                        0.00       1.15 f
+  FAI_13/U3/ZN (AOI22_X1)                  0.06       1.21 r
+  FAI_13/U2/ZN (INV_X1)                    0.03       1.24 f
+  FAI_13/Co (FA_20)                        0.00       1.24 f
+  FAI_14/Ci (FA_19)                        0.00       1.24 f
+  FAI_14/U3/ZN (AOI22_X1)                  0.06       1.30 r
+  FAI_14/U2/ZN (INV_X1)                    0.03       1.33 f
+  FAI_14/Co (FA_19)                        0.00       1.33 f
+  FAI_15/Ci (FA_18)                        0.00       1.33 f
+  FAI_15/U3/ZN (AOI22_X1)                  0.06       1.39 r
+  FAI_15/U2/ZN (INV_X1)                    0.03       1.42 f
+  FAI_15/Co (FA_18)                        0.00       1.42 f
+  FAI_16/Ci (FA_17)                        0.00       1.42 f
+  FAI_16/U3/ZN (AOI22_X1)                  0.06       1.48 r
+  FAI_16/U2/ZN (INV_X1)                    0.03       1.51 f
+  FAI_16/Co (FA_17)                        0.00       1.51 f
+  FAI_17/Ci (FA_16)                        0.00       1.51 f
+  FAI_17/U3/ZN (AOI22_X1)                  0.06       1.57 r
+  FAI_17/U2/ZN (INV_X1)                    0.03       1.60 f
+  FAI_17/Co (FA_16)                        0.00       1.60 f
+  FAI_18/Ci (FA_15)                        0.00       1.60 f
+  FAI_18/U3/ZN (AOI22_X1)                  0.06       1.66 r
+  FAI_18/U2/ZN (INV_X1)                    0.03       1.69 f
+  FAI_18/Co (FA_15)                        0.00       1.69 f
+  FAI_19/Ci (FA_14)                        0.00       1.69 f
+  FAI_19/U3/ZN (AOI22_X1)                  0.06       1.75 r
+  FAI_19/U2/ZN (INV_X1)                    0.03       1.78 f
+  FAI_19/Co (FA_14)                        0.00       1.78 f
+  FAI_20/Ci (FA_13)                        0.00       1.78 f
+  FAI_20/U3/ZN (AOI22_X1)                  0.06       1.84 r
+  FAI_20/U2/ZN (INV_X1)                    0.03       1.87 f
+  FAI_20/Co (FA_13)                        0.00       1.87 f
+  FAI_21/Ci (FA_12)                        0.00       1.87 f
+  FAI_21/U3/ZN (AOI22_X1)                  0.06       1.93 r
+  FAI_21/U2/ZN (INV_X1)                    0.03       1.96 f
+  FAI_21/Co (FA_12)                        0.00       1.96 f
+  FAI_22/Ci (FA_11)                        0.00       1.96 f
+  FAI_22/U3/ZN (AOI22_X1)                  0.06       2.02 r
+  FAI_22/U2/ZN (INV_X1)                    0.03       2.05 f
+  FAI_22/Co (FA_11)                        0.00       2.05 f
+  FAI_23/Ci (FA_10)                        0.00       2.05 f
+  FAI_23/U3/ZN (AOI22_X1)                  0.06       2.11 r
+  FAI_23/U2/ZN (INV_X1)                    0.03       2.14 f
+  FAI_23/Co (FA_10)                        0.00       2.14 f
+  FAI_24/Ci (FA_9)                         0.00       2.14 f
+  FAI_24/U3/ZN (AOI22_X1)                  0.06       2.20 r
+  FAI_24/U2/ZN (INV_X1)                    0.03       2.23 f
+  FAI_24/Co (FA_9)                         0.00       2.23 f
+  FAI_25/Ci (FA_8)                         0.00       2.23 f
+  FAI_25/U3/ZN (AOI22_X1)                  0.06       2.29 r
+  FAI_25/U2/ZN (INV_X1)                    0.03       2.32 f
+  FAI_25/Co (FA_8)                         0.00       2.32 f
+  FAI_26/Ci (FA_7)                         0.00       2.32 f
+  FAI_26/U3/ZN (AOI22_X1)                  0.06       2.38 r
+  FAI_26/U2/ZN (INV_X1)                    0.03       2.41 f
+  FAI_26/Co (FA_7)                         0.00       2.41 f
+  FAI_27/Ci (FA_6)                         0.00       2.41 f
+  FAI_27/U3/ZN (AOI22_X1)                  0.06       2.47 r
+  FAI_27/U2/ZN (INV_X1)                    0.03       2.50 f
+  FAI_27/Co (FA_6)                         0.00       2.50 f
+  FAI_28/Ci (FA_5)                         0.00       2.50 f
+  FAI_28/U3/ZN (AOI22_X1)                  0.06       2.56 r
+  FAI_28/U2/ZN (INV_X1)                    0.03       2.59 f
+  FAI_28/Co (FA_5)                         0.00       2.59 f
+  FAI_29/Ci (FA_4)                         0.00       2.59 f
+  FAI_29/U3/ZN (AOI22_X1)                  0.06       2.65 r
+  FAI_29/U2/ZN (INV_X1)                    0.03       2.68 f
+  FAI_29/Co (FA_4)                         0.00       2.68 f
+  FAI_30/Ci (FA_3)                         0.00       2.68 f
+  FAI_30/U3/ZN (AOI22_X1)                  0.06       2.74 r
+  FAI_30/U2/ZN (INV_X1)                    0.03       2.77 f
+  FAI_30/Co (FA_3)                         0.00       2.77 f
+  FAI_31/Ci (FA_2)                         0.00       2.77 f
+  FAI_31/U3/ZN (AOI22_X1)                  0.06       2.83 r
+  FAI_31/U2/ZN (INV_X1)                    0.03       2.86 f
+  FAI_31/Co (FA_2)                         0.00       2.86 f
+  FAI_32/Ci (FA_1)                         0.00       2.86 f
+  FAI_32/U3/ZN (AOI22_X1)                  0.06       2.92 r
+  FAI_32/U2/ZN (INV_X1)                    0.02       2.94 f
+  FAI_32/Co (FA_1)                         0.00       2.94 f
+  Co (out)                                 0.00       2.94 f
+  data arrival time                                   2.94
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
