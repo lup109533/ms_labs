@@ -64,4 +64,4 @@ begin
 
 	Y <= reg_o;
 
-end architecture
+end architecture;

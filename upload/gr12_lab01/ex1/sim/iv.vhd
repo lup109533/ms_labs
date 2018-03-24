@@ -2,23 +2,21 @@ library IEEE;
 use IEEE.std_logic_1164.all; --  libreria IEEE con definizione tipi standard logic
 use WORK.constants.all; -- libreria WORK user-defined
 
-entity ND2 is
+entity IV is
 	Port (	A:	In	std_logic;
-		B:	In	std_logic;
 		Y:	Out	std_logic);
-end ND2;
+end IV;
 
 
-architecture ARCH of ND2 is
+architecture BEHAVIORAL of IV is
 
 begin
-	Y <= not( A and B) after NDDELAY; -- 
+	Y <= not(A) after IVDELAY;
+	--Y <= not(A);
 
-end ARCH;
+end BEHAVIORAL;
 
-
-configuration CFG_ND2_ARCH of ND2 is
-	for ARCH
+configuration CFG_IV_BEHAVIORAL of IV is
+	for BEHAVIORAL
 	end for;
-end CFG_ND2_ARCH;
-
+end CFG_IV_BEHAVIORAL;

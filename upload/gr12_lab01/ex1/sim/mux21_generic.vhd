@@ -7,16 +7,16 @@ entity MUX21_GENERIC is
 		 DELAY_MUX: Time:= tp_mux);
 	Port (	A:	In	std_logic_vector(N-1 downto 0) ;
 		B:	In	std_logic_vector(N-1 downto 0);
-		S:	In	std_logic;
+		SEL:	In	std_logic;
 		Y:	Out	std_logic_vector(N-1 downto 0));
 end MUX21_GENERIC;
 
 architecture BEHAVIORAL of MUX21_GENERIC is
 
 begin
-	pmux: process(A,B,S)
+	pmux: process(A,B,SEL)
 	begin
-		if S = '1' then
+		if SEL = '0' then
 			Y <= A after DELAY_MUX;
 		else
 			Y <= B after DELAY_MUX;
@@ -51,16 +51,16 @@ begin
 
 	gen_mux: for i in 0 to N-1 generate
 
-		UIV(i) : IV
-		Port Map ( S, SB);
+		UIVi : IV
+		Port Map ( SEL, SB);
 
-		UND1(i) : ND2
-		Port Map ( A(i), S, Y1(i));
+		UND1i : ND2
+		Port Map ( A(i), SEL, Y1(i));
 
-		UND2(i) : ND2
+		UND2i : ND2
 		Port Map ( B(i), SB, Y2(i));
 
-		UND3(i) : ND2
+		UND3i : ND2
 		Port Map ( Y1(i), Y2(i), Y(i));
 
 	end generate;
@@ -69,22 +69,12 @@ begin
 end STRUCTURAL;
 
 
-configuration CFG_MUX21_BEHAVIORAL_1 of MUX21 is
-	for BEHAVIORAL_1
+configuration CFG_MUX21_GEN_BEHAVIORAL of MUX21_GENERIC is
+	for BEHAVIORAL
 	end for;
-end CFG_MUX21_BEHAVIORAL_1;
+end CFG_MUX21_GEN_BEHAVIORAL;
 
-configuration CFG_MUX21_BEHAVIORAL_2 of MUX21 is
-	for BEHAVIORAL_2
-	end for;
-end CFG_MUX21_BEHAVIORAL_2;
-
-configuration CFG_MUX21_BEHAVIORAL_3 of MUX21 is
-	for BEHAVIORAL_3
-	end for;
-end CFG_MUX21_BEHAVIORAL_3;
-
-configuration CFG_MUX21_STRUCTURAL of MUX21 is
+configuration CFG_MUX21_GEN_STRUCTURAL of MUX21_GENERIC is
 	for STRUCTURAL
 		for all : IV
 			use configuration WORK.CFG_IV_BEHAVIORAL;
@@ -93,4 +83,4 @@ configuration CFG_MUX21_STRUCTURAL of MUX21 is
 			use configuration WORK.CFG_ND2_ARCH2;
 		end for;
 	end for;
-end CFG_MUX21_STRUCTURAL;
+end CFG_MUX21_GEN_STRUCTURAL;
