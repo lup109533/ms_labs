@@ -1,0 +1,13 @@
+sh rm -rf work/
+sh mkdir work
+
+analyze -library WORK -format vhdl constants.vhd
+analyze -library WORK -format vhdl alu_type.vhd
+analyze -library WORK -format vhdl alu.vhd
+
+elaborate ALU -architecture BEHAVIOR -library WORK -parameters "N = 32"
+
+compile -exact_map
+
+report_area > report_area.txt
+report_timing > report_timing.txt
