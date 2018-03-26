@@ -11,3 +11,6 @@ compile -exact_map
 
 report_area > report_area.txt
 report_timing > report_timing.txt
+
+write -hierarchy -format ddc -output ./alu.ddc
+write -hierarchy -format vhdl -output ./alu.vhdl
