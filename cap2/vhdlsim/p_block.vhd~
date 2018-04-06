@@ -1,0 +1,17 @@
+library ieee; 
+use ieee.std_logic_1164.all; 
+use ieee.std_logic_unsigned.all;
+use WORK.constants.all;
+
+entity P_BLOCK is 
+	port map (
+		A, B : in  std_logic;
+		P    : out std_logic
+	);
+end P_BLOCK;
+
+architecture BEHAVIORAL of P_BLOCK is begin
+
+	P <= A xor B;
+
+end architecture

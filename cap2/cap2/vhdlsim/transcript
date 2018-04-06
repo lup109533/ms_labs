@@ -1,0 +1,23 @@
+# //  ModelSim SE 6.2g Feb 21 2007 Linux 2.6.18-410.el5
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim boothmul_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.constants
+# Loading work.boothmul_tb(test)#1
+# Loading work.boothmul(structural)#1
+# Loading work.booth_encoder(behavioral)
+# ** Fatal: (vsim-3471) Slice range (11 downto 9) does not belong to the prefix index range (9 downto 0).
+#    Time: 0 ns  Iteration: 0  Instance: /boothmul_tb/dut/encoders__3 File: boothmul.vhd Line: 56
+# FATAL ERROR while loading design
+# Error loading design
