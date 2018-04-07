@@ -24,7 +24,7 @@ begin
 
 	DUT : BOOTHMUL generic map (8) port map (A_s, B_s, P_s);
 
-	ok <= to_integer(unsigned(A_s) * unsigned(B_s)) = to_integer(unsigned(P_s));
+	ok <= to_integer(signed(A_s) * signed(B_s)) = to_integer(signed(P_s));
 
 	stimulus: process is
 	

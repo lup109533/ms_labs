@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
 use WORK.constants.all;
 
 entity BOOTHMUL is
@@ -87,20 +88,28 @@ begin
 		s0(i)                           <= (others => '0');
 
 		-- +A
-		sA(i)                           <= (others => '0');
+		sA(i)                           <= (others => A(N-1));     -- For correct sign extension
 		sA(i)(N-1+2*i downto 2*i)       <= A;
+		if (i > 0) then
+			sA(i)(2*i-1 downto 0)       <= (others => '0');        -- For correct sign extension
+		end if;
 
 		-- +2A
-		s2A(i)                          <= (others => '0');
+		s2A(i)                          <= (others => A(N-1));
 		s2A(i)(N-1+2*i+1 downto 2*i+1)  <= A;
+		s2A(i)(2*i downto 0)            <= (others => '0');        -- For correct sign extension
 
 		-- -A (1's complement)
-		smA(i)                          <= (others => '1');
+		smA(i)                          <= (others => not A(N-1)); -- For correct sign extension
 		smA(i)(N-1+2*i downto 2*i)      <= not A;
+		if (i > 0) then
+			smA(i)(2*i-1 downto 0)      <= (others => '1');        -- For correct sign extension
+		end if;
 
 		-- -2A (1's complement)
-		sm2A(i)                         <= (others => '1');
+		sm2A(i)                         <= (others => not A(N-1));
 		sm2A(i)(N-1+2*i+1 downto 2*i+1) <= not A;
+		sm2A(i)(2*i downto 0)           <= (others => '1');        -- For correct sign extension
 		
 		end loop;
 	end process;
@@ -118,6 +127,6 @@ begin
 	
 	--- OUTPUT
 	----------------------------------------------------------------------
-	P <= add_in(N/2-1); -- Last adder output
+	P <= std_logic_vector(unsigned(add_in(N/2-1)) + unsigned(mode(N/2-1 downto N/2-1))); -- Last adder output
 
 end architecture;
