@@ -10,8 +10,6 @@ entity BOOTH_ENCODER is
 end BOOTH_ENCODER;
 
 architecture BEHAVIORAL of BOOTH_ENCODER is
-
-
 begin
 
 	process (I) is begin

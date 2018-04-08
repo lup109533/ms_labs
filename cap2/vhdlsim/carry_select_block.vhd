@@ -17,29 +17,27 @@ end CARRY_SELECT_BLOCK;
 architecture STRUCTURAL of CARRY_SELECT_BLOCK is
 
 	component MUX21_GENERIC
-		Generic (N: integer:= numBit;
-			 DELAY_MUX: Time:= tp_mux);
-		Port (	A:	In	std_logic_vector(N-1 downto 0) ;
-			B:	In	std_logic_vector(N-1 downto 0);
-			SEL:	In	std_logic;
-			Y:	Out	std_logic_vector(N-1 downto 0));
+		generic (N: integer:= numBit;
+				 DELAY_MUX: Time:= tp_mux);
+		port (	A:	In	std_logic_vector(N-1 downto 0) ;
+				B:	In	std_logic_vector(N-1 downto 0);
+				SEL:	In	std_logic;
+				Y:	Out	std_logic_vector(N-1 downto 0));
 	end component;
 
 	component RCA_generic
 		generic (DRCAS : 	Time := 0 ns; 
 	        	 DRCAC : 	Time := 0 ns;
-                	 N     :        integer := numBit);
-		Port (	A:	In	std_logic_vector(N-1 downto 0);
-			B:	In	std_logic_vector(N-1 downto 0);
-			Ci:	In	std_logic;
-			S:	Out	std_logic_vector(N-1 downto 0);
-			Co:	Out	std_logic);
+                 N     :        integer := numBit);
+		port (	A:	In	std_logic_vector(N-1 downto 0);
+				B:	In	std_logic_vector(N-1 downto 0);
+				Ci:	In	std_logic;
+				S:	Out	std_logic_vector(N-1 downto 0);
+				Co:	Out	std_logic);
 	end component;
 
 	signal mux_A : std_logic_vector(N-1 downto 0);
 	signal mux_B : std_logic_vector(N-1 downto 0);
-	signal carry : std_logic_vector(1 downto 0);
-	signal c_out : std_logic_vector(0 downto 0);
 
 begin
 
@@ -49,7 +47,7 @@ begin
 					B    => B,
 					Ci   => '0',
 					S    => mux_A,
-					Co   => carry(0) 
+					Co   => open 
 				);
 
 	carry_in_1: RCA_GENERIC generic map (N => N)
@@ -57,8 +55,8 @@ begin
 					A    => A,
 					B    => B,
 					Ci   => '1',
-					S    => mux_A,
-					Co   => carry(1) 
+					S    => mux_B,
+					Co   => open
 				);
 
 	mux_sum: MUX21_GENERIC generic map (N => N)
@@ -68,14 +66,5 @@ begin
 					SEL => C_in,
 					Y   => O
 				);
-
-	mux_carry: MUX21_GENERIC generic map (N => 1)
-			       port map (
-					A   => carry(0 downto 0),
-					B   => carry(1 downto 1),
-					SEL => C_in,
-					Y   => c_out
-				);
-	C_o <= c_out(0);
 
 end architecture;

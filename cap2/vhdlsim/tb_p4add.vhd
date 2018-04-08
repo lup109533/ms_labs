@@ -16,10 +16,11 @@ architecture TEST of P4ADD_TB is
   end component;
 
   component P4ADD
-        port (
-		A, B : in  std_logic_vector(31 downto 0);
+    generic (N : natural);
+	port (
+		A, B : in  std_logic_vector(N-1 downto 0);
 		C_in : in  std_logic;
-		S    : out std_logic_vector(31 downto 0);
+		S    : out std_logic_vector(N-1 downto 0);
 		C_o  : out std_logic
 	);
   end component;
@@ -30,19 +31,13 @@ architecture TEST of P4ADD_TB is
   signal RESET,LD,EN,ZERO_D : std_logic;
   signal DIN, PRN : std_logic_vector(15 downto 0);
 
-  signal A, B, S : std_logic_vector(31 downto 0);
+  signal A, B, S : std_logic_vector(7 downto 0);
   signal Ci, Co: std_logic;
 
 Begin
 
-  UADD: P4ADD
-	   port map (A, B, Ci, S, Co);
-
-
+  UADD: P4ADD generic map (8) port map (A, B, Ci, S, Co);
   
-
-
-
 -- Forcing adder input to LFSR output
   Ci <= '0';
   A(0) <= PRN(0);
@@ -51,6 +46,8 @@ Begin
   A(1) <= PRN(6);
   A(4) <= PRN(8);
   A(2) <= PRN(10);
+  A(7) <= PRN(12);
+  A(6) <= PRN(14);
 
   B(0) <= PRN(15);
   B(5) <= PRN(13);
@@ -58,6 +55,8 @@ Begin
   B(1) <= PRN(9);
   B(4) <= PRN(7);
   B(2) <= PRN(5);
+  B(7) <= PRN(3);
+  B(6) <= PRN(1);
 
 -- Instanciate the Unit Under Test (UUT)
   UUT: LFSR16 port map (CLK=>CLK, RESET=>RESET, LD=>LD, EN=>EN, 
