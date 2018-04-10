@@ -1,0 +1,73 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : P4ADD_N32
+Version: Z-2007.03-SP1
+Date   : Mon Apr  9 21:42:07 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: A[3] (input port)
+  Endpoint: S[17] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  P4ADD_N32          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  A[3] (in)                                               0.00       0.00 f
+  carry_gen/A[3] (CARRY_GENERATOR_N32)                    0.00       0.00 f
+  carry_gen/U41/Z (XOR2_X1)                               0.08       0.08 f
+  carry_gen/pg_i_1/Pi[1] (PG_BLOCK_0)                     0.00       0.08 f
+  carry_gen/pg_i_1/U3/ZN (AOI21_X1)                       0.04       0.12 r
+  carry_gen/pg_i_1/U1/ZN (INV_X1)                         0.02       0.14 f
+  carry_gen/pg_i_1/Go (PG_BLOCK_0)                        0.00       0.14 f
+  carry_gen/g_i_0_0/Gi[1] (G_BLOCK_8)                     0.00       0.14 f
+  carry_gen/g_i_0_0/U1/ZN (AOI21_X1)                      0.05       0.19 r
+  carry_gen/g_i_0_0/U2/ZN (INV_X1)                        0.03       0.22 f
+  carry_gen/g_i_0_0/Go (G_BLOCK_8)                        0.00       0.22 f
+  carry_gen/g_i_0_1/Gi[0] (G_BLOCK_7)                     0.00       0.22 f
+  carry_gen/g_i_0_1/U3/ZN (NAND2_X1)                      0.03       0.25 r
+  carry_gen/g_i_0_1/U2/ZN (NAND2_X1)                      0.03       0.28 f
+  carry_gen/g_i_0_1/Go (G_BLOCK_7)                        0.00       0.28 f
+  carry_gen/g_i_1_3/Gi[0] (G_BLOCK_5)                     0.00       0.28 f
+  carry_gen/g_i_1_3/U3/ZN (NAND2_X1)                      0.03       0.31 r
+  carry_gen/g_i_1_3/U1/ZN (NAND2_X1)                      0.04       0.35 f
+  carry_gen/g_i_1_3/Go (G_BLOCK_5)                        0.00       0.35 f
+  carry_gen/U2/Z (BUF_X2)                                 0.06       0.41 f
+  carry_gen/C_o[4] (CARRY_GENERATOR_N32)                  0.00       0.41 f
+  sum_gen/C_in[4] (SUM_GENERATOR_N32)                     0.00       0.41 f
+  sum_gen/csa_block_4/C_in (CARRY_SELECT_BLOCK_N4_4)      0.00       0.41 f
+  sum_gen/csa_block_4/mux_sum/SEL (MUX21_GENERIC_N4_4)
+                                                          0.00       0.41 f
+  sum_gen/csa_block_4/mux_sum/U1/ZN (INV_X1)              0.04       0.44 r
+  sum_gen/csa_block_4/mux_sum/U5/ZN (AOI22_X1)            0.03       0.47 f
+  sum_gen/csa_block_4/mux_sum/U2/ZN (INV_X1)              0.02       0.50 r
+  sum_gen/csa_block_4/mux_sum/Y[1] (MUX21_GENERIC_N4_4)
+                                                          0.00       0.50 r
+  sum_gen/csa_block_4/O[1] (CARRY_SELECT_BLOCK_N4_4)      0.00       0.50 r
+  sum_gen/O[17] (SUM_GENERATOR_N32)                       0.00       0.50 r
+  S[17] (out)                                             0.00       0.50 r
+  data arrival time                                                  0.50
+
+  max_delay                                               0.50       0.50
+  output external delay                                   0.00       0.50
+  data required time                                                 0.50
+  --------------------------------------------------------------------------
+  data required time                                                 0.50
+  data arrival time                                                 -0.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

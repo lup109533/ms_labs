@@ -25,7 +25,7 @@ architecture STRUCTURAL of CARRY_SELECT_BLOCK is
 	end component;
 
 	component RCA_generic
-		generic (integer := numBit);
+		generic (N: integer := numBit);
 		port (	A:	In	std_logic_vector(N-1 downto 0);
 				B:	In	std_logic_vector(N-1 downto 0);
 				Ci:	In	std_logic;

@@ -32,7 +32,7 @@ begin
   Co <= CTMP(N);
   
   ADDER1: for I in 1 to N generate
-    FAI : FA
+    FAI : FA 
 	  Port Map (A(I-1), B(I-1), CTMP(I-1), STMP(I-1), CTMP(I)); 
   end generate;
 

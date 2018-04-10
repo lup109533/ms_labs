@@ -1,0 +1,133 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BOOTHMUL_N8
+Version: Z-2007.03-SP1
+Date   : Tue Apr 10 00:24:17 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B[1] (input port)
+  Endpoint: P[15] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BOOTHMUL_N8        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 r
+  B[1] (in)                                               0.00       0.00 r
+  enc_i_1/I[0] (BOOTH_ENCODER_3)                          0.00       0.00 r
+  enc_i_1/U1/ZN (NAND2_X1)                                0.03       0.03 f
+  enc_i_1/U2/ZN (XNOR2_X1)                                0.05       0.08 f
+  enc_i_1/U7/ZN (NOR2_X1)                                 0.05       0.13 r
+  enc_i_1/O[1] (BOOTH_ENCODER_3)                          0.00       0.13 r
+  mux_i_1/SEL[1] (MUX51_GENERIC_N16_3)                    0.00       0.13 r
+  mux_i_1/U12/ZN (INV_X1)                                 0.03       0.17 f
+  mux_i_1/U10/ZN (NAND2_X1)                               0.04       0.20 r
+  mux_i_1/U4/Z (CLKBUF_X1)                                0.04       0.25 r
+  mux_i_1/U2/ZN (NAND3_X1)                                0.03       0.28 f
+  mux_i_1/U3/ZN (OAI211_X1)                               0.05       0.33 r
+  mux_i_1/Y[0] (MUX51_GENERIC_N16_3)                      0.00       0.33 r
+  add_i_0/A[0] (RCA_generic_N16_0)                        0.00       0.33 r
+  add_i_0/FAI_1/A (FA_0)                                  0.00       0.33 r
+  add_i_0/FAI_1/U10/ZN (NOR2_X1)                          0.03       0.36 f
+  add_i_0/FAI_1/U7/ZN (XNOR2_X1)                          0.05       0.41 f
+  add_i_0/FAI_1/U2/ZN (NAND2_X1)                          0.03       0.45 r
+  add_i_0/FAI_1/Co (FA_0)                                 0.00       0.45 r
+  add_i_0/FAI_2/Ci (FA_47)                                0.00       0.45 r
+  add_i_0/FAI_2/U1/ZN (NAND2_X1)                          0.03       0.48 f
+  add_i_0/FAI_2/U2/ZN (NAND2_X1)                          0.03       0.51 r
+  add_i_0/FAI_2/Co (FA_47)                                0.00       0.51 r
+  add_i_0/FAI_3/Ci (FA_46)                                0.00       0.51 r
+  add_i_0/FAI_3/U2/ZN (NAND2_X1)                          0.03       0.54 f
+  add_i_0/FAI_3/U3/ZN (NAND2_X1)                          0.03       0.57 r
+  add_i_0/FAI_3/Co (FA_46)                                0.00       0.57 r
+  add_i_0/FAI_4/Ci (FA_45)                                0.00       0.57 r
+  add_i_0/FAI_4/U1/ZN (NAND2_X1)                          0.03       0.60 f
+  add_i_0/FAI_4/U2/ZN (NAND2_X1)                          0.03       0.63 r
+  add_i_0/FAI_4/Co (FA_45)                                0.00       0.63 r
+  add_i_0/FAI_5/Ci (FA_44)                                0.00       0.63 r
+  add_i_0/FAI_5/U1/ZN (NAND2_X1)                          0.03       0.66 f
+  add_i_0/FAI_5/U2/ZN (NAND2_X1)                          0.03       0.70 r
+  add_i_0/FAI_5/Co (FA_44)                                0.00       0.70 r
+  add_i_0/FAI_6/Ci (FA_43)                                0.00       0.70 r
+  add_i_0/FAI_6/U1/ZN (NAND2_X1)                          0.03       0.72 f
+  add_i_0/FAI_6/U2/ZN (NAND2_X1)                          0.03       0.76 r
+  add_i_0/FAI_6/Co (FA_43)                                0.00       0.76 r
+  add_i_0/FAI_7/Ci (FA_42)                                0.00       0.76 r
+  add_i_0/FAI_7/U1/ZN (NAND2_X1)                          0.03       0.79 f
+  add_i_0/FAI_7/U2/ZN (NAND2_X1)                          0.03       0.82 r
+  add_i_0/FAI_7/Co (FA_42)                                0.00       0.82 r
+  add_i_0/FAI_8/Ci (FA_41)                                0.00       0.82 r
+  add_i_0/FAI_8/U1/ZN (NAND2_X1)                          0.03       0.85 f
+  add_i_0/FAI_8/U2/ZN (NAND2_X1)                          0.03       0.88 r
+  add_i_0/FAI_8/Co (FA_41)                                0.00       0.88 r
+  add_i_0/FAI_9/Ci (FA_40)                                0.00       0.88 r
+  add_i_0/FAI_9/U1/ZN (NAND2_X1)                          0.03       0.91 f
+  add_i_0/FAI_9/U2/ZN (NAND2_X1)                          0.03       0.94 r
+  add_i_0/FAI_9/Co (FA_40)                                0.00       0.94 r
+  add_i_0/FAI_10/Ci (FA_39)                               0.00       0.94 r
+  add_i_0/FAI_10/U1/ZN (NAND2_X1)                         0.03       0.97 f
+  add_i_0/FAI_10/U2/ZN (NAND2_X1)                         0.03       1.01 r
+  add_i_0/FAI_10/Co (FA_39)                               0.00       1.01 r
+  add_i_0/FAI_11/Ci (FA_38)                               0.00       1.01 r
+  add_i_0/FAI_11/U1/ZN (NAND2_X1)                         0.03       1.03 f
+  add_i_0/FAI_11/U2/ZN (NAND2_X1)                         0.03       1.07 r
+  add_i_0/FAI_11/Co (FA_38)                               0.00       1.07 r
+  add_i_0/FAI_12/Ci (FA_37)                               0.00       1.07 r
+  add_i_0/FAI_12/U1/ZN (NAND2_X1)                         0.03       1.10 f
+  add_i_0/FAI_12/U2/ZN (NAND2_X1)                         0.03       1.13 r
+  add_i_0/FAI_12/Co (FA_37)                               0.00       1.13 r
+  add_i_0/FAI_13/Ci (FA_36)                               0.00       1.13 r
+  add_i_0/FAI_13/U1/ZN (NAND2_X1)                         0.03       1.16 f
+  add_i_0/FAI_13/U2/ZN (NAND2_X1)                         0.03       1.19 r
+  add_i_0/FAI_13/Co (FA_36)                               0.00       1.19 r
+  add_i_0/FAI_14/Ci (FA_35)                               0.00       1.19 r
+  add_i_0/FAI_14/U1/ZN (NAND2_X1)                         0.03       1.22 f
+  add_i_0/FAI_14/U2/ZN (NAND2_X1)                         0.03       1.25 r
+  add_i_0/FAI_14/Co (FA_35)                               0.00       1.25 r
+  add_i_0/FAI_15/Ci (FA_34)                               0.00       1.25 r
+  add_i_0/FAI_15/U1/ZN (NAND2_X1)                         0.03       1.28 f
+  add_i_0/FAI_15/U2/ZN (NAND2_X1)                         0.03       1.31 r
+  add_i_0/FAI_15/Co (FA_34)                               0.00       1.31 r
+  add_i_0/FAI_16/Ci (FA_33)                               0.00       1.31 r
+  add_i_0/FAI_16/U1/ZN (XNOR2_X1)                         0.06       1.38 r
+  add_i_0/FAI_16/S (FA_33)                                0.00       1.38 r
+  add_i_0/S[15] (RCA_generic_N16_0)                       0.00       1.38 r
+  add_i_1/B[15] (RCA_generic_N16_2)                       0.00       1.38 r
+  add_i_1/FAI_16/B (FA_17)                                0.00       1.38 r
+  add_i_1/FAI_16/U1/ZN (XNOR2_X1)                         0.06       1.44 r
+  add_i_1/FAI_16/U2/ZN (XNOR2_X1)                         0.07       1.51 r
+  add_i_1/FAI_16/S (FA_17)                                0.00       1.51 r
+  add_i_1/S[15] (RCA_generic_N16_2)                       0.00       1.51 r
+  add_i_2/B[15] (RCA_generic_N16_1)                       0.00       1.51 r
+  add_i_2/FAI_16/B (FA_1)                                 0.00       1.51 r
+  add_i_2/FAI_16/U2/ZN (XNOR2_X1)                         0.06       1.57 r
+  add_i_2/FAI_16/U1/ZN (XNOR2_X1)                         0.06       1.63 r
+  add_i_2/FAI_16/S (FA_1)                                 0.00       1.63 r
+  add_i_2/S[15] (RCA_generic_N16_1)                       0.00       1.63 r
+  U71/ZN (XNOR2_X1)                                       0.05       1.69 r
+  P[15] (out)                                             0.00       1.69 r
+  data arrival time                                                  1.69
+
+  max_delay                                               1.00       1.00
+  output external delay                                   0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -1.69
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.69
+
+
+1

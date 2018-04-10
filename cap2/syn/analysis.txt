@@ -1,0 +1,5 @@
+The critical path goes from one of the bits of input A to one of the bits of output S (total delay 0.50 ns).
+Carry generation requires 0.41 ns.
+Sum generation requires 0.09 ns.
+This is expected since, in the worst case, carry generation requires a signal to pass through log2(n)+1 stages,
+while sum generation only requires a signal to pass through 1 adder + 1 mux.

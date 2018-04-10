@@ -1,21 +1,16 @@
 ##############################################################
 #SCRIPT FOR SPEEDING UP and RECORDING the MULTIPLIER SYNTHESIS#
-##############################################################
-
-###### CLEANING
-sh rm -rf work/
-sh mkdir work
-
-##############################################################
 # analyzing and checking vhdl netlist#
 # here the analyze command is used for each file from bottom to top #
 ##############################################################
 analyze -library WORK -format vhdl {constants.vhd}
 analyze -library WORK -format vhdl {fa.vhd}
+# fill these lines with your files ...
 analyze -library WORK -format vhdl {rca_generic.vhd}
 analyze -library WORK -format vhdl {mux51_generic.vhd}
 analyze -library WORK -format vhdl {booth_encoder_unit.vhd}
 analyze -library WORK -format vhdl {boothmul.vhd}
+##############################################################
 
 ###### 8 BITS
 # elaborating the top entity -- here supposed BOOTHMUL#

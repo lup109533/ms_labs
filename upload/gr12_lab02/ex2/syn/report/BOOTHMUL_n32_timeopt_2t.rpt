@@ -1,0 +1,404 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'BOOTHMUL_N32' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BOOTHMUL_N32
+Version: Z-2007.03-SP1
+Date   : Mon Apr  9 21:35:09 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B[0] (input port)
+  Endpoint: P[63] (output port)
+  Path Group: default
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BOOTHMUL_N32       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  B[0] (in)                                               0.00       0.00 f
+  enc_i_0/I[1] (BOOTH_ENCODER_8)                          0.00       0.00 f
+  enc_i_0/U3/ZN (NAND2_X1)                                0.03       0.03 r
+  enc_i_0/U4/ZN (XNOR2_X1)                                0.05       0.08 r
+  enc_i_0/U5/ZN (AND2_X2)                                 0.05       0.13 r
+  enc_i_0/O[1] (BOOTH_ENCODER_8)                          0.00       0.13 r
+  mux_i_0/SEL[1] (MUX51_GENERIC_N64_0)                    0.00       0.13 r
+  mux_i_0/U14/ZN (INV_X1)                                 0.03       0.16 f
+  mux_i_0/U15/ZN (OR2_X1)                                 0.06       0.22 f
+  mux_i_0/U10/ZN (AND2_X1)                                0.04       0.26 f
+  mux_i_0/U11/ZN (NAND2_X1)                               0.03       0.29 r
+  mux_i_0/U20/ZN (NAND4_X1)                               0.04       0.33 f
+  mux_i_0/Y[0] (MUX51_GENERIC_N64_0)                      0.00       0.33 f
+  add_i_0/B[0] (RCA_generic_N64_0)                        0.00       0.33 f
+  add_i_0/FAI_1/B (FA_96)                                 0.00       0.33 f
+  add_i_0/FAI_1/U6/ZN (XNOR2_X1)                          0.07       0.40 f
+  add_i_0/FAI_1/U1/ZN (OAI21_X1)                          0.06       0.46 r
+  add_i_0/FAI_1/Co (FA_96)                                0.00       0.46 r
+  add_i_0/FAI_2/Ci (FA_1055)                              0.00       0.46 r
+  add_i_0/FAI_2/U4/ZN (XNOR2_X1)                          0.07       0.54 r
+  add_i_0/FAI_2/S (FA_1055)                               0.00       0.54 r
+  add_i_0/S[1] (RCA_generic_N64_0)                        0.00       0.54 r
+  add_i_1/B[1] (RCA_generic_N64_14)                       0.00       0.54 r
+  add_i_1/FAI_2/B (FA_991)                                0.00       0.54 r
+  add_i_1/FAI_2/U2/Z (XOR2_X1)                            0.07       0.61 r
+  add_i_1/FAI_2/U5/ZN (NAND2_X1)                          0.03       0.64 f
+  add_i_1/FAI_2/U6/ZN (NAND2_X1)                          0.03       0.67 r
+  add_i_1/FAI_2/Co (FA_991)                               0.00       0.67 r
+  add_i_1/FAI_3/Ci (FA_990)                               0.00       0.67 r
+  add_i_1/FAI_3/U7/ZN (XNOR2_X1)                          0.07       0.74 r
+  add_i_1/FAI_3/S (FA_990)                                0.00       0.74 r
+  add_i_1/S[2] (RCA_generic_N64_14)                       0.00       0.74 r
+  add_i_2/B[2] (RCA_generic_N64_13)                       0.00       0.74 r
+  add_i_2/FAI_3/B (FA_926)                                0.00       0.74 r
+  add_i_2/FAI_3/U3/ZN (XNOR2_X1)                          0.07       0.81 r
+  add_i_2/FAI_3/U7/ZN (XNOR2_X1)                          0.07       0.88 r
+  add_i_2/FAI_3/S (FA_926)                                0.00       0.88 r
+  add_i_2/S[2] (RCA_generic_N64_13)                       0.00       0.88 r
+  add_i_3/B[2] (RCA_generic_N64_12)                       0.00       0.88 r
+  add_i_3/FAI_3/B (FA_862)                                0.00       0.88 r
+  add_i_3/FAI_3/U1/Z (XOR2_X1)                            0.07       0.96 r
+  add_i_3/FAI_3/U5/ZN (NAND2_X1)                          0.03       0.99 f
+  add_i_3/FAI_3/U6/ZN (NAND2_X1)                          0.04       1.02 r
+  add_i_3/FAI_3/Co (FA_862)                               0.00       1.02 r
+  add_i_3/FAI_4/Ci (FA_861)                               0.00       1.02 r
+  add_i_3/FAI_4/U5/ZN (NAND2_X1)                          0.03       1.05 f
+  add_i_3/FAI_4/U6/ZN (NAND2_X1)                          0.03       1.08 r
+  add_i_3/FAI_4/Co (FA_861)                               0.00       1.08 r
+  add_i_3/FAI_5/Ci (FA_860)                               0.00       1.08 r
+  add_i_3/FAI_5/U6/ZN (XNOR2_X1)                          0.07       1.15 r
+  add_i_3/FAI_5/S (FA_860)                                0.00       1.15 r
+  add_i_3/S[4] (RCA_generic_N64_12)                       0.00       1.15 r
+  add_i_4/B[4] (RCA_generic_N64_11)                       0.00       1.15 r
+  add_i_4/FAI_5/B (FA_796)                                0.00       1.15 r
+  add_i_4/FAI_5/U2/Z (XOR2_X1)                            0.07       1.23 r
+  add_i_4/FAI_5/U5/ZN (NAND2_X1)                          0.03       1.26 f
+  add_i_4/FAI_5/U6/ZN (NAND2_X1)                          0.04       1.29 r
+  add_i_4/FAI_5/Co (FA_796)                               0.00       1.29 r
+  add_i_4/FAI_6/Ci (FA_795)                               0.00       1.29 r
+  add_i_4/FAI_6/U7/ZN (XNOR2_X1)                          0.07       1.36 r
+  add_i_4/FAI_6/S (FA_795)                                0.00       1.36 r
+  add_i_4/S[5] (RCA_generic_N64_11)                       0.00       1.36 r
+  add_i_5/B[5] (RCA_generic_N64_10)                       0.00       1.36 r
+  add_i_5/FAI_6/B (FA_731)                                0.00       1.36 r
+  add_i_5/FAI_6/U3/ZN (XNOR2_X1)                          0.07       1.43 r
+  add_i_5/FAI_6/U7/ZN (XNOR2_X1)                          0.07       1.51 r
+  add_i_5/FAI_6/S (FA_731)                                0.00       1.51 r
+  add_i_5/S[5] (RCA_generic_N64_10)                       0.00       1.51 r
+  add_i_6/B[5] (RCA_generic_N64_9)                        0.00       1.51 r
+  add_i_6/FAI_6/B (FA_667)                                0.00       1.51 r
+  add_i_6/FAI_6/U3/ZN (XNOR2_X1)                          0.07       1.58 r
+  add_i_6/FAI_6/U7/ZN (XNOR2_X1)                          0.07       1.64 r
+  add_i_6/FAI_6/S (FA_667)                                0.00       1.64 r
+  add_i_6/S[5] (RCA_generic_N64_9)                        0.00       1.64 r
+  add_i_7/B[5] (RCA_generic_N64_8)                        0.00       1.64 r
+  add_i_7/FAI_6/B (FA_603)                                0.00       1.64 r
+  add_i_7/FAI_6/U2/ZN (XNOR2_X1)                          0.07       1.71 r
+  add_i_7/FAI_6/U4/ZN (INV_X1)                            0.02       1.74 f
+  add_i_7/FAI_6/U5/ZN (NAND2_X1)                          0.03       1.76 r
+  add_i_7/FAI_6/U6/ZN (NAND2_X1)                          0.03       1.79 f
+  add_i_7/FAI_6/Co (FA_603)                               0.00       1.79 f
+  add_i_7/FAI_7/Ci (FA_602)                               0.00       1.79 f
+  add_i_7/FAI_7/U6/ZN (XNOR2_X1)                          0.07       1.87 r
+  add_i_7/FAI_7/S (FA_602)                                0.00       1.87 r
+  add_i_7/S[6] (RCA_generic_N64_8)                        0.00       1.87 r
+  add_i_8/B[6] (RCA_generic_N64_7)                        0.00       1.87 r
+  add_i_8/FAI_7/B (FA_538)                                0.00       1.87 r
+  add_i_8/FAI_7/U3/ZN (XNOR2_X1)                          0.07       1.94 r
+  add_i_8/FAI_7/U7/ZN (XNOR2_X1)                          0.07       2.00 r
+  add_i_8/FAI_7/S (FA_538)                                0.00       2.00 r
+  add_i_8/S[6] (RCA_generic_N64_7)                        0.00       2.00 r
+  add_i_9/B[6] (RCA_generic_N64_6)                        0.00       2.00 r
+  add_i_9/FAI_7/B (FA_474)                                0.00       2.00 r
+  add_i_9/FAI_7/U1/ZN (XNOR2_X1)                          0.07       2.07 r
+  add_i_9/FAI_7/U3/ZN (INV_X1)                            0.02       2.10 f
+  add_i_9/FAI_7/U4/ZN (NAND2_X1)                          0.03       2.13 r
+  add_i_9/FAI_7/U5/ZN (NAND2_X1)                          0.03       2.16 f
+  add_i_9/FAI_7/Co (FA_474)                               0.00       2.16 f
+  add_i_9/FAI_8/Ci (FA_473)                               0.00       2.16 f
+  add_i_9/FAI_8/U4/ZN (NAND2_X1)                          0.03       2.19 r
+  add_i_9/FAI_8/U5/ZN (NAND2_X1)                          0.03       2.22 f
+  add_i_9/FAI_8/Co (FA_473)                               0.00       2.22 f
+  add_i_9/FAI_9/Ci (FA_472)                               0.00       2.22 f
+  add_i_9/FAI_9/U4/ZN (NAND2_X1)                          0.03       2.25 r
+  add_i_9/FAI_9/U5/ZN (NAND2_X1)                          0.03       2.28 f
+  add_i_9/FAI_9/Co (FA_472)                               0.00       2.28 f
+  add_i_9/FAI_10/Ci (FA_471)                              0.00       2.28 f
+  add_i_9/FAI_10/U7/ZN (XNOR2_X1)                         0.07       2.35 f
+  add_i_9/FAI_10/S (FA_471)                               0.00       2.35 f
+  add_i_9/S[9] (RCA_generic_N64_6)                        0.00       2.35 f
+  add_i_10/B[9] (RCA_generic_N64_5)                       0.00       2.35 f
+  add_i_10/FAI_10/B (FA_407)                              0.00       2.35 f
+  add_i_10/FAI_10/U1/Z (XOR2_X1)                          0.08       2.44 f
+  add_i_10/FAI_10/U4/ZN (NAND2_X1)                        0.03       2.47 r
+  add_i_10/FAI_10/U5/ZN (NAND2_X1)                        0.03       2.50 f
+  add_i_10/FAI_10/Co (FA_407)                             0.00       2.50 f
+  add_i_10/FAI_11/Ci (FA_406)                             0.00       2.50 f
+  add_i_10/FAI_11/U6/ZN (XNOR2_X1)                        0.07       2.57 f
+  add_i_10/FAI_11/S (FA_406)                              0.00       2.57 f
+  add_i_10/S[10] (RCA_generic_N64_5)                      0.00       2.57 f
+  add_i_11/B[10] (RCA_generic_N64_4)                      0.00       2.57 f
+  add_i_11/FAI_11/B (FA_342)                              0.00       2.57 f
+  add_i_11/FAI_11/U1/Z (XOR2_X1)                          0.08       2.65 f
+  add_i_11/FAI_11/U4/ZN (NAND2_X1)                        0.03       2.68 r
+  add_i_11/FAI_11/U5/ZN (NAND2_X1)                        0.03       2.71 f
+  add_i_11/FAI_11/Co (FA_342)                             0.00       2.71 f
+  add_i_11/FAI_12/Ci (FA_341)                             0.00       2.71 f
+  add_i_11/FAI_12/U5/ZN (NAND2_X1)                        0.03       2.74 r
+  add_i_11/FAI_12/U6/ZN (NAND2_X1)                        0.03       2.77 f
+  add_i_11/FAI_12/Co (FA_341)                             0.00       2.77 f
+  add_i_11/FAI_13/Ci (FA_340)                             0.00       2.77 f
+  add_i_11/FAI_13/U6/ZN (XNOR2_X1)                        0.06       2.84 f
+  add_i_11/FAI_13/S (FA_340)                              0.00       2.84 f
+  add_i_11/S[12] (RCA_generic_N64_4)                      0.00       2.84 f
+  add_i_12/B[12] (RCA_generic_N64_3)                      0.00       2.84 f
+  add_i_12/FAI_13/B (FA_276)                              0.00       2.84 f
+  add_i_12/FAI_13/U1/ZN (XNOR2_X1)                        0.07       2.90 f
+  add_i_12/FAI_13/U3/ZN (INV_X1)                          0.03       2.94 r
+  add_i_12/FAI_13/U4/ZN (NAND2_X1)                        0.03       2.96 f
+  add_i_12/FAI_13/U5/ZN (NAND2_X1)                        0.03       2.99 r
+  add_i_12/FAI_13/Co (FA_276)                             0.00       2.99 r
+  add_i_12/FAI_14/Ci (FA_275)                             0.00       2.99 r
+  add_i_12/FAI_14/U4/ZN (NAND2_X1)                        0.03       3.02 f
+  add_i_12/FAI_14/U5/ZN (NAND2_X1)                        0.04       3.06 r
+  add_i_12/FAI_14/Co (FA_275)                             0.00       3.06 r
+  add_i_12/FAI_15/Ci (FA_274)                             0.00       3.06 r
+  add_i_12/FAI_15/U4/ZN (NAND2_X1)                        0.03       3.09 f
+  add_i_12/FAI_15/U5/ZN (NAND2_X1)                        0.03       3.12 r
+  add_i_12/FAI_15/Co (FA_274)                             0.00       3.12 r
+  add_i_12/FAI_16/Ci (FA_273)                             0.00       3.12 r
+  add_i_12/FAI_16/U4/ZN (NAND2_X1)                        0.03       3.15 f
+  add_i_12/FAI_16/U5/ZN (NAND2_X1)                        0.03       3.18 r
+  add_i_12/FAI_16/Co (FA_273)                             0.00       3.18 r
+  add_i_12/FAI_17/Ci (FA_272)                             0.00       3.18 r
+  add_i_12/FAI_17/U5/ZN (NAND2_X1)                        0.03       3.21 f
+  add_i_12/FAI_17/U6/ZN (NAND2_X1)                        0.04       3.25 r
+  add_i_12/FAI_17/Co (FA_272)                             0.00       3.25 r
+  add_i_12/FAI_18/Ci (FA_271)                             0.00       3.25 r
+  add_i_12/FAI_18/U4/ZN (NAND2_X1)                        0.03       3.28 f
+  add_i_12/FAI_18/U5/ZN (NAND2_X1)                        0.03       3.31 r
+  add_i_12/FAI_18/Co (FA_271)                             0.00       3.31 r
+  add_i_12/FAI_19/Ci (FA_270)                             0.00       3.31 r
+  add_i_12/FAI_19/U4/ZN (NAND2_X1)                        0.03       3.34 f
+  add_i_12/FAI_19/U5/ZN (NAND2_X1)                        0.03       3.37 r
+  add_i_12/FAI_19/Co (FA_270)                             0.00       3.37 r
+  add_i_12/FAI_20/Ci (FA_269)                             0.00       3.37 r
+  add_i_12/FAI_20/U4/ZN (NAND2_X1)                        0.03       3.40 f
+  add_i_12/FAI_20/U5/ZN (NAND2_X1)                        0.04       3.44 r
+  add_i_12/FAI_20/Co (FA_269)                             0.00       3.44 r
+  add_i_12/FAI_21/Ci (FA_268)                             0.00       3.44 r
+  add_i_12/FAI_21/U4/ZN (NAND2_X1)                        0.03       3.47 f
+  add_i_12/FAI_21/U5/ZN (NAND2_X1)                        0.03       3.50 r
+  add_i_12/FAI_21/Co (FA_268)                             0.00       3.50 r
+  add_i_12/FAI_22/Ci (FA_267)                             0.00       3.50 r
+  add_i_12/FAI_22/U5/ZN (NAND2_X1)                        0.03       3.53 f
+  add_i_12/FAI_22/U6/ZN (NAND2_X1)                        0.03       3.56 r
+  add_i_12/FAI_22/Co (FA_267)                             0.00       3.56 r
+  add_i_12/FAI_23/Ci (FA_266)                             0.00       3.56 r
+  add_i_12/FAI_23/U4/ZN (NAND2_X1)                        0.03       3.59 f
+  add_i_12/FAI_23/U5/ZN (NAND2_X1)                        0.03       3.62 r
+  add_i_12/FAI_23/Co (FA_266)                             0.00       3.62 r
+  add_i_12/FAI_24/Ci (FA_265)                             0.00       3.62 r
+  add_i_12/FAI_24/U4/ZN (NAND2_X1)                        0.03       3.65 f
+  add_i_12/FAI_24/U5/ZN (NAND2_X1)                        0.03       3.69 r
+  add_i_12/FAI_24/Co (FA_265)                             0.00       3.69 r
+  add_i_12/FAI_25/Ci (FA_264)                             0.00       3.69 r
+  add_i_12/FAI_25/U4/ZN (NAND2_X1)                        0.03       3.71 f
+  add_i_12/FAI_25/U5/ZN (NAND2_X1)                        0.03       3.75 r
+  add_i_12/FAI_25/Co (FA_264)                             0.00       3.75 r
+  add_i_12/FAI_26/Ci (FA_263)                             0.00       3.75 r
+  add_i_12/FAI_26/U4/ZN (NAND2_X1)                        0.03       3.78 f
+  add_i_12/FAI_26/U5/ZN (NAND2_X1)                        0.03       3.81 r
+  add_i_12/FAI_26/Co (FA_263)                             0.00       3.81 r
+  add_i_12/FAI_27/Ci (FA_262)                             0.00       3.81 r
+  add_i_12/FAI_27/U4/ZN (NAND2_X1)                        0.03       3.84 f
+  add_i_12/FAI_27/U5/ZN (NAND2_X1)                        0.03       3.87 r
+  add_i_12/FAI_27/Co (FA_262)                             0.00       3.87 r
+  add_i_12/FAI_28/Ci (FA_261)                             0.00       3.87 r
+  add_i_12/FAI_28/U4/ZN (NAND2_X1)                        0.03       3.90 f
+  add_i_12/FAI_28/U5/ZN (NAND2_X1)                        0.04       3.94 r
+  add_i_12/FAI_28/Co (FA_261)                             0.00       3.94 r
+  add_i_12/FAI_29/Ci (FA_260)                             0.00       3.94 r
+  add_i_12/FAI_29/U4/ZN (NAND2_X1)                        0.03       3.97 f
+  add_i_12/FAI_29/U5/ZN (NAND2_X1)                        0.03       4.00 r
+  add_i_12/FAI_29/Co (FA_260)                             0.00       4.00 r
+  add_i_12/FAI_30/Ci (FA_259)                             0.00       4.00 r
+  add_i_12/FAI_30/U4/ZN (NAND2_X1)                        0.03       4.03 f
+  add_i_12/FAI_30/U5/ZN (NAND2_X1)                        0.03       4.06 r
+  add_i_12/FAI_30/Co (FA_259)                             0.00       4.06 r
+  add_i_12/FAI_31/Ci (FA_258)                             0.00       4.06 r
+  add_i_12/FAI_31/U5/ZN (NAND2_X1)                        0.03       4.09 f
+  add_i_12/FAI_31/U6/ZN (NAND2_X1)                        0.03       4.12 r
+  add_i_12/FAI_31/Co (FA_258)                             0.00       4.12 r
+  add_i_12/FAI_32/Ci (FA_257)                             0.00       4.12 r
+  add_i_12/FAI_32/U5/ZN (NAND2_X1)                        0.03       4.15 f
+  add_i_12/FAI_32/U6/ZN (NAND2_X1)                        0.03       4.18 r
+  add_i_12/FAI_32/Co (FA_257)                             0.00       4.18 r
+  add_i_12/FAI_33/Ci (FA_256)                             0.00       4.18 r
+  add_i_12/FAI_33/U4/ZN (NAND2_X1)                        0.03       4.21 f
+  add_i_12/FAI_33/U5/ZN (NAND2_X1)                        0.03       4.25 r
+  add_i_12/FAI_33/Co (FA_256)                             0.00       4.25 r
+  add_i_12/FAI_34/Ci (FA_255)                             0.00       4.25 r
+  add_i_12/FAI_34/U4/ZN (NAND2_X1)                        0.03       4.28 f
+  add_i_12/FAI_34/U5/ZN (NAND2_X1)                        0.03       4.31 r
+  add_i_12/FAI_34/Co (FA_255)                             0.00       4.31 r
+  add_i_12/FAI_35/Ci (FA_254)                             0.00       4.31 r
+  add_i_12/FAI_35/U4/ZN (NAND2_X1)                        0.03       4.34 f
+  add_i_12/FAI_35/U5/ZN (NAND2_X1)                        0.03       4.37 r
+  add_i_12/FAI_35/Co (FA_254)                             0.00       4.37 r
+  add_i_12/FAI_36/Ci (FA_253)                             0.00       4.37 r
+  add_i_12/FAI_36/U4/ZN (NAND2_X1)                        0.03       4.40 f
+  add_i_12/FAI_36/U5/ZN (NAND2_X1)                        0.03       4.43 r
+  add_i_12/FAI_36/Co (FA_253)                             0.00       4.43 r
+  add_i_12/FAI_37/Ci (FA_252)                             0.00       4.43 r
+  add_i_12/FAI_37/U4/ZN (NAND2_X1)                        0.03       4.46 f
+  add_i_12/FAI_37/U5/ZN (NAND2_X1)                        0.03       4.50 r
+  add_i_12/FAI_37/Co (FA_252)                             0.00       4.50 r
+  add_i_12/FAI_38/Ci (FA_251)                             0.00       4.50 r
+  add_i_12/FAI_38/U2/ZN (NAND2_X1)                        0.03       4.52 f
+  add_i_12/FAI_38/U5/ZN (NAND2_X1)                        0.03       4.56 r
+  add_i_12/FAI_38/Co (FA_251)                             0.00       4.56 r
+  add_i_12/FAI_39/Ci (FA_250)                             0.00       4.56 r
+  add_i_12/FAI_39/U4/ZN (NAND2_X1)                        0.03       4.59 f
+  add_i_12/FAI_39/U5/ZN (NAND2_X1)                        0.03       4.62 r
+  add_i_12/FAI_39/Co (FA_250)                             0.00       4.62 r
+  add_i_12/FAI_40/Ci (FA_249)                             0.00       4.62 r
+  add_i_12/FAI_40/U4/ZN (NAND2_X1)                        0.03       4.65 f
+  add_i_12/FAI_40/U5/ZN (NAND2_X1)                        0.03       4.68 r
+  add_i_12/FAI_40/Co (FA_249)                             0.00       4.68 r
+  add_i_12/FAI_41/Ci (FA_248)                             0.00       4.68 r
+  add_i_12/FAI_41/U4/ZN (NAND2_X1)                        0.03       4.71 f
+  add_i_12/FAI_41/U5/ZN (NAND2_X1)                        0.03       4.74 r
+  add_i_12/FAI_41/Co (FA_248)                             0.00       4.74 r
+  add_i_12/FAI_42/Ci (FA_247)                             0.00       4.74 r
+  add_i_12/FAI_42/U5/ZN (NAND2_X1)                        0.03       4.77 f
+  add_i_12/FAI_42/U6/ZN (NAND2_X1)                        0.03       4.81 r
+  add_i_12/FAI_42/Co (FA_247)                             0.00       4.81 r
+  add_i_12/FAI_43/Ci (FA_246)                             0.00       4.81 r
+  add_i_12/FAI_43/U4/ZN (NAND2_X1)                        0.03       4.84 f
+  add_i_12/FAI_43/U5/ZN (NAND2_X1)                        0.03       4.87 r
+  add_i_12/FAI_43/Co (FA_246)                             0.00       4.87 r
+  add_i_12/FAI_44/Ci (FA_245)                             0.00       4.87 r
+  add_i_12/FAI_44/U4/ZN (NAND2_X1)                        0.03       4.90 f
+  add_i_12/FAI_44/U2/ZN (NAND2_X1)                        0.03       4.93 r
+  add_i_12/FAI_44/Co (FA_245)                             0.00       4.93 r
+  add_i_12/FAI_45/Ci (FA_244)                             0.00       4.93 r
+  add_i_12/FAI_45/U4/ZN (NAND2_X1)                        0.03       4.96 f
+  add_i_12/FAI_45/U2/ZN (NAND2_X1)                        0.03       4.99 r
+  add_i_12/FAI_45/Co (FA_244)                             0.00       4.99 r
+  add_i_12/FAI_46/Ci (FA_243)                             0.00       4.99 r
+  add_i_12/FAI_46/U4/ZN (NAND2_X1)                        0.03       5.02 f
+  add_i_12/FAI_46/U5/ZN (NAND2_X1)                        0.03       5.05 r
+  add_i_12/FAI_46/Co (FA_243)                             0.00       5.05 r
+  add_i_12/FAI_47/Ci (FA_242)                             0.00       5.05 r
+  add_i_12/FAI_47/U4/ZN (NAND2_X1)                        0.03       5.08 f
+  add_i_12/FAI_47/U5/ZN (NAND2_X1)                        0.03       5.12 r
+  add_i_12/FAI_47/Co (FA_242)                             0.00       5.12 r
+  add_i_12/FAI_48/Ci (FA_241)                             0.00       5.12 r
+  add_i_12/FAI_48/U4/ZN (NAND2_X1)                        0.03       5.15 f
+  add_i_12/FAI_48/U2/ZN (NAND2_X1)                        0.03       5.18 r
+  add_i_12/FAI_48/Co (FA_241)                             0.00       5.18 r
+  add_i_12/FAI_49/Ci (FA_240)                             0.00       5.18 r
+  add_i_12/FAI_49/U4/ZN (NAND2_X1)                        0.03       5.21 f
+  add_i_12/FAI_49/U5/ZN (NAND2_X1)                        0.03       5.24 r
+  add_i_12/FAI_49/Co (FA_240)                             0.00       5.24 r
+  add_i_12/FAI_50/Ci (FA_239)                             0.00       5.24 r
+  add_i_12/FAI_50/U4/ZN (NAND2_X1)                        0.03       5.27 f
+  add_i_12/FAI_50/U5/ZN (NAND2_X1)                        0.03       5.30 r
+  add_i_12/FAI_50/Co (FA_239)                             0.00       5.30 r
+  add_i_12/FAI_51/Ci (FA_238)                             0.00       5.30 r
+  add_i_12/FAI_51/U4/ZN (NAND2_X1)                        0.03       5.33 f
+  add_i_12/FAI_51/U2/ZN (NAND2_X1)                        0.03       5.36 r
+  add_i_12/FAI_51/Co (FA_238)                             0.00       5.36 r
+  add_i_12/FAI_52/Ci (FA_237)                             0.00       5.36 r
+  add_i_12/FAI_52/U6/ZN (XNOR2_X1)                        0.07       5.44 r
+  add_i_12/FAI_52/S (FA_237)                              0.00       5.44 r
+  add_i_12/S[51] (RCA_generic_N64_3)                      0.00       5.44 r
+  add_i_13/B[51] (RCA_generic_N64_2)                      0.00       5.44 r
+  add_i_13/FAI_52/B (FA_173)                              0.00       5.44 r
+  add_i_13/FAI_52/U1/Z (XOR2_X1)                          0.08       5.51 r
+  add_i_13/FAI_52/U4/ZN (NAND2_X1)                        0.03       5.54 f
+  add_i_13/FAI_52/U5/ZN (NAND2_X1)                        0.03       5.57 r
+  add_i_13/FAI_52/Co (FA_173)                             0.00       5.57 r
+  add_i_13/FAI_53/Ci (FA_172)                             0.00       5.57 r
+  add_i_13/FAI_53/U6/ZN (NAND2_X1)                        0.03       5.60 f
+  add_i_13/FAI_53/U7/ZN (NAND2_X1)                        0.03       5.63 r
+  add_i_13/FAI_53/Co (FA_172)                             0.00       5.63 r
+  add_i_13/FAI_54/Ci (FA_171)                             0.00       5.63 r
+  add_i_13/FAI_54/U5/ZN (NAND2_X1)                        0.03       5.66 f
+  add_i_13/FAI_54/U6/ZN (NAND2_X1)                        0.03       5.69 r
+  add_i_13/FAI_54/Co (FA_171)                             0.00       5.69 r
+  add_i_13/FAI_55/Ci (FA_170)                             0.00       5.69 r
+  add_i_13/FAI_55/U6/ZN (NAND2_X1)                        0.03       5.72 f
+  add_i_13/FAI_55/U7/ZN (NAND2_X1)                        0.03       5.76 r
+  add_i_13/FAI_55/Co (FA_170)                             0.00       5.76 r
+  add_i_13/FAI_56/Ci (FA_169)                             0.00       5.76 r
+  add_i_13/FAI_56/U5/ZN (NAND2_X1)                        0.03       5.79 f
+  add_i_13/FAI_56/U6/ZN (NAND2_X1)                        0.03       5.82 r
+  add_i_13/FAI_56/Co (FA_169)                             0.00       5.82 r
+  add_i_13/FAI_57/Ci (FA_168)                             0.00       5.82 r
+  add_i_13/FAI_57/U5/ZN (NAND2_X1)                        0.03       5.85 f
+  add_i_13/FAI_57/U6/ZN (NAND2_X1)                        0.03       5.88 r
+  add_i_13/FAI_57/Co (FA_168)                             0.00       5.88 r
+  add_i_13/FAI_58/Ci (FA_167)                             0.00       5.88 r
+  add_i_13/FAI_58/U5/ZN (NAND2_X1)                        0.03       5.91 f
+  add_i_13/FAI_58/U6/ZN (NAND2_X1)                        0.03       5.94 r
+  add_i_13/FAI_58/Co (FA_167)                             0.00       5.94 r
+  add_i_13/FAI_59/Ci (FA_166)                             0.00       5.94 r
+  add_i_13/FAI_59/U5/ZN (NAND2_X1)                        0.03       5.97 f
+  add_i_13/FAI_59/U6/ZN (NAND2_X1)                        0.03       6.01 r
+  add_i_13/FAI_59/Co (FA_166)                             0.00       6.01 r
+  add_i_13/FAI_60/Ci (FA_165)                             0.00       6.01 r
+  add_i_13/FAI_60/U6/ZN (NAND2_X1)                        0.03       6.04 f
+  add_i_13/FAI_60/U7/ZN (NAND2_X1)                        0.03       6.07 r
+  add_i_13/FAI_60/Co (FA_165)                             0.00       6.07 r
+  add_i_13/FAI_61/Ci (FA_164)                             0.00       6.07 r
+  add_i_13/FAI_61/U5/ZN (NAND2_X1)                        0.03       6.10 f
+  add_i_13/FAI_61/U6/ZN (NAND2_X1)                        0.03       6.13 r
+  add_i_13/FAI_61/Co (FA_164)                             0.00       6.13 r
+  add_i_13/FAI_62/Ci (FA_163)                             0.00       6.13 r
+  add_i_13/FAI_62/U6/ZN (NAND2_X1)                        0.03       6.16 f
+  add_i_13/FAI_62/U3/ZN (NAND2_X1)                        0.03       6.19 r
+  add_i_13/FAI_62/Co (FA_163)                             0.00       6.19 r
+  add_i_13/FAI_63/Ci (FA_162)                             0.00       6.19 r
+  add_i_13/FAI_63/U1/ZN (NAND2_X1)                        0.03       6.22 f
+  add_i_13/FAI_63/U2/ZN (NAND2_X1)                        0.03       6.26 r
+  add_i_13/FAI_63/Co (FA_162)                             0.00       6.26 r
+  add_i_13/FAI_64/Ci (FA_161)                             0.00       6.26 r
+  add_i_13/FAI_64/U1/ZN (XNOR2_X1)                        0.06       6.32 r
+  add_i_13/FAI_64/S (FA_161)                              0.00       6.32 r
+  add_i_13/S[63] (RCA_generic_N64_2)                      0.00       6.32 r
+  add_i_14/B[63] (RCA_generic_N64_1)                      0.00       6.32 r
+  add_i_14/FAI_64/B (FA_97)                               0.00       6.32 r
+  add_i_14/FAI_64/U3/ZN (XNOR2_X1)                        0.07       6.38 r
+  add_i_14/FAI_64/U1/ZN (XNOR2_X1)                        0.07       6.45 r
+  add_i_14/FAI_64/S (FA_97)                               0.00       6.45 r
+  add_i_14/S[63] (RCA_generic_N64_1)                      0.00       6.45 r
+  add_128/A[63] (BOOTHMUL_N32_DW01_add_0)                 0.00       6.45 r
+  add_128/U2/ZN (XNOR2_X1)                                0.05       6.51 r
+  add_128/SUM[63] (BOOTHMUL_N32_DW01_add_0)               0.00       6.51 r
+  P[63] (out)                                             0.00       6.51 r
+  data arrival time                                                  6.51
+
+  max_delay                                               1.00       1.00
+  output external delay                                   0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -6.51
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -5.51
+
+
+1

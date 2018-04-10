@@ -1,0 +1,126 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BOOTHMUL_N8
+Version: Z-2007.03-SP1
+Date   : Tue Apr 10 00:23:36 2018
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B[0] (input port)
+  Endpoint: P[15] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  BOOTHMUL_N8        5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  input external delay                                    0.00       0.00 f
+  B[0] (in)                                               0.00       0.00 f
+  enc_i_0/I[1] (BOOTH_ENCODER_0)                          0.00       0.00 f
+  enc_i_0/U6/ZN (XNOR2_X1)                                0.06       0.06 f
+  enc_i_0/U3/Z (MUX2_X1)                                  0.07       0.13 f
+  enc_i_0/U2/ZN (INV_X1)                                  0.06       0.19 r
+  enc_i_0/O[1] (BOOTH_ENCODER_0)                          0.00       0.19 r
+  mux_i_0/SEL[1] (MUX51_GENERIC_N16_0)                    0.00       0.19 r
+  mux_i_0/U55/ZN (INV_X1)                                 0.05       0.24 f
+  mux_i_0/U4/ZN (NOR3_X4)                                 0.17       0.42 r
+  mux_i_0/U3/ZN (NOR4_X4)                                 0.12       0.54 f
+  mux_i_0/U52/ZN (AOI222_X1)                              0.12       0.66 r
+  mux_i_0/U51/ZN (NAND2_X1)                               0.04       0.70 f
+  mux_i_0/Y[0] (MUX51_GENERIC_N16_0)                      0.00       0.70 f
+  add_i_0/B[0] (RCA_generic_N16_0)                        0.00       0.70 f
+  add_i_0/FAI_1/B (FA_0)                                  0.00       0.70 f
+  add_i_0/FAI_1/U4/Z (XOR2_X1)                            0.08       0.78 f
+  add_i_0/FAI_1/U1/Z (XOR2_X1)                            0.08       0.86 f
+  add_i_0/FAI_1/S (FA_0)                                  0.00       0.86 f
+  add_i_0/S[0] (RCA_generic_N16_0)                        0.00       0.86 f
+  add_i_1/B[0] (RCA_generic_N16_2)                        0.00       0.86 f
+  add_i_1/FAI_1/B (FA_32)                                 0.00       0.86 f
+  add_i_1/FAI_1/U4/Z (XOR2_X1)                            0.08       0.95 f
+  add_i_1/FAI_1/U1/Z (XOR2_X1)                            0.08       1.03 f
+  add_i_1/FAI_1/S (FA_32)                                 0.00       1.03 f
+  add_i_1/S[0] (RCA_generic_N16_2)                        0.00       1.03 f
+  add_i_2/B[0] (RCA_generic_N16_1)                        0.00       1.03 f
+  add_i_2/FAI_1/B (FA_16)                                 0.00       1.03 f
+  add_i_2/FAI_1/U4/Z (XOR2_X1)                            0.08       1.11 f
+  add_i_2/FAI_1/U3/ZN (AOI22_X1)                          0.06       1.17 r
+  add_i_2/FAI_1/U2/ZN (INV_X1)                            0.03       1.20 f
+  add_i_2/FAI_1/Co (FA_16)                                0.00       1.20 f
+  add_i_2/FAI_2/Ci (FA_15)                                0.00       1.20 f
+  add_i_2/FAI_2/U3/ZN (AOI22_X1)                          0.06       1.26 r
+  add_i_2/FAI_2/U2/ZN (INV_X1)                            0.03       1.29 f
+  add_i_2/FAI_2/Co (FA_15)                                0.00       1.29 f
+  add_i_2/FAI_3/Ci (FA_14)                                0.00       1.29 f
+  add_i_2/FAI_3/U3/ZN (AOI22_X1)                          0.06       1.35 r
+  add_i_2/FAI_3/U2/ZN (INV_X1)                            0.03       1.38 f
+  add_i_2/FAI_3/Co (FA_14)                                0.00       1.38 f
+  add_i_2/FAI_4/Ci (FA_13)                                0.00       1.38 f
+  add_i_2/FAI_4/U3/ZN (AOI22_X1)                          0.06       1.44 r
+  add_i_2/FAI_4/U2/ZN (INV_X1)                            0.03       1.47 f
+  add_i_2/FAI_4/Co (FA_13)                                0.00       1.47 f
+  add_i_2/FAI_5/Ci (FA_12)                                0.00       1.47 f
+  add_i_2/FAI_5/U3/ZN (AOI22_X1)                          0.06       1.53 r
+  add_i_2/FAI_5/U2/ZN (INV_X1)                            0.03       1.56 f
+  add_i_2/FAI_5/Co (FA_12)                                0.00       1.56 f
+  add_i_2/FAI_6/Ci (FA_11)                                0.00       1.56 f
+  add_i_2/FAI_6/U3/ZN (AOI22_X1)                          0.06       1.62 r
+  add_i_2/FAI_6/U2/ZN (INV_X1)                            0.03       1.65 f
+  add_i_2/FAI_6/Co (FA_11)                                0.00       1.65 f
+  add_i_2/FAI_7/Ci (FA_10)                                0.00       1.65 f
+  add_i_2/FAI_7/U3/ZN (AOI22_X1)                          0.06       1.71 r
+  add_i_2/FAI_7/U2/ZN (INV_X1)                            0.03       1.74 f
+  add_i_2/FAI_7/Co (FA_10)                                0.00       1.74 f
+  add_i_2/FAI_8/Ci (FA_9)                                 0.00       1.74 f
+  add_i_2/FAI_8/U3/ZN (AOI22_X1)                          0.06       1.80 r
+  add_i_2/FAI_8/U2/ZN (INV_X1)                            0.03       1.83 f
+  add_i_2/FAI_8/Co (FA_9)                                 0.00       1.83 f
+  add_i_2/FAI_9/Ci (FA_8)                                 0.00       1.83 f
+  add_i_2/FAI_9/U3/ZN (AOI22_X1)                          0.06       1.89 r
+  add_i_2/FAI_9/U2/ZN (INV_X1)                            0.03       1.92 f
+  add_i_2/FAI_9/Co (FA_8)                                 0.00       1.92 f
+  add_i_2/FAI_10/Ci (FA_7)                                0.00       1.92 f
+  add_i_2/FAI_10/U3/ZN (AOI22_X1)                         0.06       1.98 r
+  add_i_2/FAI_10/U2/ZN (INV_X1)                           0.03       2.01 f
+  add_i_2/FAI_10/Co (FA_7)                                0.00       2.01 f
+  add_i_2/FAI_11/Ci (FA_6)                                0.00       2.01 f
+  add_i_2/FAI_11/U3/ZN (AOI22_X1)                         0.06       2.07 r
+  add_i_2/FAI_11/U2/ZN (INV_X1)                           0.03       2.10 f
+  add_i_2/FAI_11/Co (FA_6)                                0.00       2.10 f
+  add_i_2/FAI_12/Ci (FA_5)                                0.00       2.10 f
+  add_i_2/FAI_12/U3/ZN (AOI22_X1)                         0.06       2.16 r
+  add_i_2/FAI_12/U2/ZN (INV_X1)                           0.03       2.19 f
+  add_i_2/FAI_12/Co (FA_5)                                0.00       2.19 f
+  add_i_2/FAI_13/Ci (FA_4)                                0.00       2.19 f
+  add_i_2/FAI_13/U3/ZN (AOI22_X1)                         0.06       2.25 r
+  add_i_2/FAI_13/U2/ZN (INV_X1)                           0.03       2.28 f
+  add_i_2/FAI_13/Co (FA_4)                                0.00       2.28 f
+  add_i_2/FAI_14/Ci (FA_3)                                0.00       2.28 f
+  add_i_2/FAI_14/U3/ZN (AOI22_X1)                         0.06       2.34 r
+  add_i_2/FAI_14/U2/ZN (INV_X1)                           0.03       2.37 f
+  add_i_2/FAI_14/Co (FA_3)                                0.00       2.37 f
+  add_i_2/FAI_15/Ci (FA_2)                                0.00       2.37 f
+  add_i_2/FAI_15/U3/ZN (AOI22_X1)                         0.06       2.43 r
+  add_i_2/FAI_15/U2/ZN (INV_X1)                           0.03       2.46 f
+  add_i_2/FAI_15/Co (FA_2)                                0.00       2.46 f
+  add_i_2/FAI_16/Ci (FA_1)                                0.00       2.46 f
+  add_i_2/FAI_16/U1/Z (XOR2_X1)                           0.07       2.53 f
+  add_i_2/FAI_16/S (FA_1)                                 0.00       2.53 f
+  add_i_2/S[15] (RCA_generic_N16_1)                       0.00       2.53 f
+  U45/Z (XOR2_X1)                                         0.06       2.59 f
+  P[15] (out)                                             0.00       2.59 f
+  data arrival time                                                  2.59
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

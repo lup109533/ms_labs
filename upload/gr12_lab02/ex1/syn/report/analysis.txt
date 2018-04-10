@@ -1,0 +1,16 @@
+The critical path goes from one of the bits of input A to one of the bits of output S (total delay 0.50 ns).
+Carry generation requires 0.41 ns.
+	The signal passes through:
+		- PG block of stage 0.
+		- G block of stage 1.
+		- G block of stage 2.
+		- G block of stage 3.
+		- G block of stage 4.
+		And then exits the carry generator.
+Sum generation requires 0.09 ns.
+	The signal passes through:
+		- The SEL port of the MUX21_GENERIC.
+		- The internal logic of the MUX.
+		And then exits the sum generator.
+This is expected since, in the worst case, carry generation requires a signal to pass through log2(n)+1 G/PG block stages,
+while sum generation only requires a signal to pass through 1 adder + 1 mux (in this case only thorugh the mux).
