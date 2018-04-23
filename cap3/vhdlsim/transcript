@@ -1,0 +1,27 @@
+# //  ModelSim SE 6.2g Feb 21 2007 Linux 2.6.18-410.el5
+# //
+# //  Copyright 1991-2007 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim -t 100ps tb_windowed_registerfile 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
+# Loading work.utils(body)
+# Loading work.tb_windowed_registerfile(testa)#1
+# Loading work.windowed_register_file(behavioral)#1
+# Loading work.register_file(behavioral)#1
+add wave -r /*
+run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /tb_windowed_registerfile/rg
+# ** Fatal: (vsim-3421) Value 4 is out of range 0 to 3.
+#    Time: 137500 ps  Iteration: 1  Process: /tb_windowed_registerfile/rg/enable_window File: windowed_registerfile.vhd
+# Fatal error in Process enable_window at windowed_registerfile.vhd line 264
+# 

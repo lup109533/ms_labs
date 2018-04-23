@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : windowed_register_file_reg_size64_M4_N4_F4
+Version: Z-2007.03-SP1
+Date   : Fri Apr 20 19:47:57 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: ADD_RD2[2] (input port)
+  Endpoint: OUT1[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  windowed_register_file_reg_size64_M4_N4_F4
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 r
+  ADD_RD2[2] (in)                          0.00       0.00 r
+  U2305/ZN (INV_X1)                        0.02       0.02 f
+  U2298/ZN (NAND2_X1)                      0.10       0.13 r
+  U1187/ZN (NAND2_X4)                      0.17       0.30 f
+  U1186/ZN (INV_X4)                        0.25       0.55 r
+  U1962/ZN (NOR2_X1)                       0.07       0.62 f
+  U1946/ZN (INV_X1)                        0.05       0.67 r
+  U1942/ZN (NOR2_X1)                       0.03       0.70 f
+  U1185/Z (CLKBUF_X3)                      0.18       0.88 f
+  U1292/ZN (AOI222_X1)                     0.17       1.04 r
+  U1291/ZN (OAI211_X1)                     0.04       1.08 f
+  OUT1[63] (out)                           0.00       1.09 f
+  data arrival time                                   1.09
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

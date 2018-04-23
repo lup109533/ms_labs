@@ -1,0 +1,25 @@
+sh rm -rf work/
+sh mkdir work
+
+analyze -library WORK -format vhdl {utils.vhd}
+analyze -library WORK -format vhdl {registerfile.vhd}
+analyze -library WORK -format vhdl {windowed_registerfile.vhd}
+
+elaborate windowed_register_file -architecture BEHAVIORAL -parameters "reg_size = 64, M = 4, N = 4, F = 4"
+
+compile
+
+report_area > windowed_registerfile_area1_no_constr.rpr
+report_timing > windowed_registerfile_timing1_no_constr.rpr
+
+### Constrained
+create_clock -name "CLK" -period 2 CLK
+set_max_delay 2 -from [all_inputs] -to [all_outputs]
+
+compile
+
+report_area > windowed_registerfile_area2_constr.rpr
+report_timing > windowed_registerfile_timing2_constr.rpr
+
+write -hierarchy -format vhdl -output windowed_registerfile_file_size_32_reg_size_64.vhdl
+write -hierarchy -format ddc -output windowed_registerfile_file_size_32_reg_size_64.ddc

@@ -1,0 +1,133 @@
+m255
+13
+cModel Technology
+d/home/ms18.12/cap3/vhdlsim
+T_opt
+VWNPSHX>=STK4MIi?II5k>0
+06 14 5 ./work tbregisterfile testa 1
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+Eregister_file
+w1524240761
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+8registerfile.vhd
+Fregisterfile.vhd
+l0
+L7
+VfNW:MPbSN6UF^OEjgDlbQ3
+OE;C;6.2g;35
+tExplicit 1
+Abehavioral
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work register_file fNW:MPbSN6UF^OEjgDlbQ3
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work utils
+l29
+L23
+VD6XLKOS2=<Nc;Q9DMgQHV1
+OE;C;6.2g;35
+tExplicit 1
+Etb_windowed_registerfile
+w1524242648
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8tb_windowed_registerfile.vhd
+Ftb_windowed_registerfile.vhd
+l0
+L6
+VFI91]P1OE;aI=WDWZ:KZ;1
+OE;C;6.2g;35
+32
+tExplicit 1
+Atesta
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tb_windowed_registerfile FI91]P1OE;aI=WDWZ:KZ;1
+l49
+L9
+VjS4abW^j=Pc5BNfmInWof1
+OE;C;6.2g;35
+32
+M2 ieee std_logic_1164
+M1 work utils
+tExplicit 1
+Etbregisterfile
+w1523527986
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+8tb_registerfile.vhd
+Ftb_registerfile.vhd
+l0
+L6
+V_PJbKTFZ:;k6dNJI8Qh9C3
+OE;C;6.2g;35
+tExplicit 1
+Atesta
+DE work register_file fNW:MPbSN6UF^OEjgDlbQ3
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tbregisterfile _PJbKTFZ:;k6dNJI8Qh9C3
+32
+M2 ieee std_logic_1164
+M1 work utils
+l42
+L9
+VZ@4nHYog3[_6Y^?z7[ZVT1
+OE;C;6.2g;35
+tExplicit 1
+Putils
+w1523527760
+8utils.vhd
+Futils.vhd
+l0
+L1
+VfSlf<EA?aObMhl1VoY86c2
+OE;C;6.2g;35
+32
+b1
+tExplicit 1
+Bbody
+DB work utils fSlf<EA?aObMhl1VoY86c2
+32
+l0
+L1
+VjQFieGTk_7G1YFmMP]A5Y0
+OE;C;6.2g;35
+tExplicit 1
+nbody
+Ewindowed_register_file
+w1524242088
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8windowed_registerfile.vhd
+Fwindowed_registerfile.vhd
+l0
+L7
+VDX0k7z0lSNooBSY6aR`Ei0
+OE;C;6.2g;35
+32
+tExplicit 1
+Abehavioral
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work windowed_register_file DX0k7z0lSNooBSY6aR`Ei0
+l77
+L27
+V5:U@C_FG8l?k@W4?gzWWi1
+OE;C;6.2g;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work utils
+tExplicit 1

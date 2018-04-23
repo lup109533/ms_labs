@@ -1,0 +1,38 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : register_file_reg_size64_file_size32_1
+Version: Z-2007.03-SP1
+Date   : Thu Apr 12 13:05:16 2018
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: OUT1_reg[63]
+              (rising edge-triggered flip-flop)
+  Endpoint: OUT1[63] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  register_file_reg_size64_file_size32_1
+                     5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  OUT1_reg[63]/CK (DFF_X1)                 0.00 #     0.00 r
+  OUT1_reg[63]/Q (DFF_X1)                  0.08       0.08 r
+  OUT1[63] (out)                           0.00       0.08 r
+  data arrival time                                   0.08
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1

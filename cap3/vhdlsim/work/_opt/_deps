@@ -1,0 +1,12 @@
+H 2141964 11 3 0 4 4 0 0 0 0
+L 4 ieee 19 $MODEL_TECH/../ieee
+L 3 std 18 $MODEL_TECH/../std
+L 4 work 6 ./work
+D 32 ./work.register_file(behavioral) D6XLKOS2=<Nc;Q9DMgQHV1 2 1
+D 28 ./work.tbregisterfile(testa) Z@4nHYog3[_6Y^?z7[ZVT1 3 1
+D 12 ./work.utils jQFieGTk_7G1YFmMP]A5Y0 1 1
+D 18 ./work.utils(body) jQFieGTk_7G1YFmMP]A5Y0 0 1
+2 0  1 RGhk^VUJ0Pz02K:0MOQa80 3 3 1
+2 0  1 1meWm1cekG3ThZN^WN5RL0 2 2 1
+2 0  0 jQFieGTk_7G1YFmMP]A5Y0 0 0 1
+2 0  0 `@E3z>B]HUBgQcTjC0I[G2 1 1 1
