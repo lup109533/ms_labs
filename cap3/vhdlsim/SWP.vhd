@@ -48,12 +48,22 @@ architecture BEHAVIORAL of SWP is
 		);
 	end component;
 
+	component COUNTER
+		generic (N: natural);
+		port (
+			CLK	:	in	std_logic;
+			RESET	:	in	std_logic;
+			ENABLE	:	in	std_logic;
+			OUTPUT	:	out	std_logic_vector(N downto 0)
+		);
+	end component;
+
 	signal rotr, rotl : std_logic;
 	signal init       : std_logic_vector(F-1 downto 0);
 
-	signal addr_s     : unsigned(log2(N)-1 downto 0);
-	signal addr_sum   : unsigned(log2(N)   downto 0);  -- Stores the sum of the current address + 1 + carry.
-	signal addr_ovf   : std_logic;                     -- Carry of the counter; used to detect overflow.
+	signal counter_enable : std_logic;
+	signal addr_s         : std_logic_vector(log2(N) downto 0);
+	signal addr_ovf       : std_logic;				-- Carry of the counter; used to detect overflow.
 
 	type SWP_state is (s_IDLE, s_SPILL_ACK, s_SPILL_IO, s_SPILL_LOC, s_FILL_ACK, s_FILL_IO, s_FILL_LOC, s_SPILL_DONE, s_FILL_DONE);
 
@@ -165,25 +175,13 @@ begin
 
 	end process;
 
-	----- Sequential signals
-	-- Address counter
-	addr_counter: process (CLK, RESET) is begin
-		
-		if rising_edge(CLK) then
-
-			if (RESET = '1') then
-				addr_s <= (others => '0');
-			elsif (state = s_SPILL_IO or state = s_SPILL_LOC or state = s_FILL_IO or state = s_FILL_LOC) then
-				addr_s <= addr_sum(log2(N)-1 downto 0);
-			end if;
-
-		end if;
-
-	end process;
-
-	addr_sum <= ('0' & addr_s) + 1;
-	addr_ovf <= addr_sum(log2(N));
-
+	
+	----- Address counter
+	addr_counter: COUNTER generic map (log2(N)) port map (CLK, RESET, counter_enable, addr_s);
+	
+	ADDR           <= addr_s(log2(N)-1 downto 0);
+	addr_ovf       <= addr_s(log2(N));
+	counter_enable <= '1' when (state = s_SPILL_IO or state = s_SPILL_LOC or state = s_FILL_IO or state = s_FILL_LOC) else '0';
 	
 
 end architecture;
