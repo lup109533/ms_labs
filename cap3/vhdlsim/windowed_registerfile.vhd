@@ -141,12 +141,12 @@ begin
 	-----                 00000                                                                               ------
 	-----                    ^^                                                                               ------
 	-----                    ||                                                                               ------
-	-----                    These log2(N) bits are used as address for the local and I/O rfs                 ------
+	-----                    These log2(N) bits are used as address for the local and I/O RFs                 ------
 	-----                                                                                                     ------
 	-----                 00000                                                                               ------
 	-----                  ^^                                                                                 ------
 	-----                  ||                                                                                 ------
-	-----                  These 2 bits are used to distinguish between sub-rfs:                              ------
+	-----                  These 2 bits are used to distinguish between sub-RFs:                              ------
 	-----                                00 = input                                                           ------
 	-----                                01 = local                                                           ------
 	-----                                10 = output                                                          ------

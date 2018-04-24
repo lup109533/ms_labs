@@ -38,41 +38,42 @@ DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work circular_buffer_shft2 ?mQJVU3hoCM]@aG8@Bn_M2
-l28
-L24
-V=?j>^oA[6;M6lJWgSSbEP3
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
+l28
+L24
+V=?j>^oA[6;M6lJWgSSbEP3
+OE;C;6.2g;35
 tExplicit 1
 Ecwp
 w1524579260
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
 8CWP.vhd
 FCWP.vhd
 l0
 L15
 V2Oa?Tkh<CF?Ng>_<KA1j53
 OE;C;6.2g;35
-32
 tExplicit 1
 Abehavioral
+DE work circular_buffer_shft2 ?mQJVU3hoCM]@aG8@Bn_M2
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work cwp 2Oa?Tkh<CF?Ng>_<KA1j53
-l55
-L32
-V5KB4h2Y^H4VVNE6z6NA5N2
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
+l55
+L32
+V5KB4h2Y^H4VVNE6z6NA5N2
+OE;C;6.2g;35
 tExplicit 1
 Eregister_file
 w1524247989
@@ -101,56 +102,30 @@ M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
 tExplicit 1
-Eswp
-w1524584266
-DP work utils fSlf<EA?aObMhl1VoY86c2
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-8SWP.vhd
-FSWP.vhd
-l0
-L15
-V;55Ao=RcaEaVg@giX]>P]0
-OE;C;6.2g;35
-32
-tExplicit 1
-Abehavioral
-DP work utils fSlf<EA?aObMhl1VoY86c2
-DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
-DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work swp ;55Ao=RcaEaVg@giX]>P]0
-l62
-L37
-VdmJiJ5[79[n@ADT=4AhbN1
-OE;C;6.2g;35
-32
-M3 ieee std_logic_1164
-M2 ieee numeric_std
-M1 work utils
-tExplicit 1
 Etb_cwp
 w1524568401
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
 8tb_CWP.vhd
 Ftb_CWP.vhd
 l0
 L6
 VbY8i7Dezz;VXjoGLjVT@>0
 OE;C;6.2g;35
-32
 tExplicit 1
 Atesta
+DE work cwp 2Oa?Tkh<CF?Ng>_<KA1j53
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work tb_cwp bY8i7Dezz;VXjoGLjVT@>0
+32
+M2 ieee std_logic_1164
+M1 work utils
 l40
 L9
 VQa[UagQ@Q`:fXmBm7dQW<0
 OE;C;6.2g;35
-32
-M2 ieee std_logic_1164
-M1 work utils
 tExplicit 1
 Etb_windowed_registerfile
 w1524251069
@@ -216,11 +191,11 @@ b1
 tExplicit 1
 Bbody
 DB work utils fSlf<EA?aObMhl1VoY86c2
+32
 l0
 L1
 VjQFieGTk_7G1YFmMP]A5Y0
 OE;C;6.2g;35
-32
 tExplicit 1
 nbody
 Ewindowed_register_file
