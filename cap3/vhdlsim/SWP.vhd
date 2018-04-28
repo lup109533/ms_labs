@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use IEEE.std_logic_misc.all;
 use WORK.utils.all;
 use WORK.all;
 
@@ -62,8 +63,8 @@ architecture BEHAVIORAL of SWP is
 	signal init       : std_logic_vector(F-1 downto 0);
 
 	signal counter_enable : std_logic;
-	signal addr_s         : std_logic_vector(log2(N) downto 0);
-	signal addr_ovf       : std_logic;				-- Carry of the counter; used to detect overflow.
+	signal addr_s         : std_logic_vector(log2(N)-1 downto 0);
+	signal addr_ovf       : std_logic;				-- Detects if add_s is all '1's.
 
 	type SWP_state is (s_IDLE, s_SPILL_ACK, s_SPILL_IO, s_SPILL_LOC, s_FILL_ACK, s_FILL_IO, s_FILL_LOC, s_SPILL_DONE, s_FILL_DONE);
 
@@ -151,7 +152,6 @@ begin
 
 	
 	----- Combinational outputs & internal signals
-	ADDR     <= std_logic_vector(addr_s);
 	rotr     <= '1' when     (state = s_SPILL_DONE)                                              else '0';
 	rotl     <= '1' when     (state = s_FILL_DONE)                                               else '0';
 	OVERRIDE <= '1' when not (state = s_IDLE)                                                    else '0';
@@ -163,7 +163,7 @@ begin
 	
 
 	----- Bus manager
-	bus_manager: process (state) is begin
+	bus_manager: process (state, addr_ovf) is begin
 		
 		if (state = s_SPILL_IO or state = s_SPILL_LOC) then
 			MBUS <= DATAIN;
@@ -180,7 +180,7 @@ begin
 	addr_counter: COUNTER generic map (log2(N)) port map (CLK, RESET, counter_enable, addr_s);
 	
 	ADDR           <= addr_s(log2(N)-1 downto 0);
-	addr_ovf       <= addr_s(log2(N));
+	addr_ovf       <= and_reduce(addr_s);
 	counter_enable <= '1' when (state = s_SPILL_IO or state = s_SPILL_LOC or state = s_FILL_IO or state = s_FILL_LOC) else '0';
 	
 

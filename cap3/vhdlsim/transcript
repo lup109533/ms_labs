@@ -8,16 +8,17 @@
 # //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
 # //  AND IS SUBJECT TO LICENSE TERMS.
 # //
-# vsim -t 100ps tb_cwp 
+# vsim -t 1ns tb_windowed_registerfile 
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading /software/mentor/modelsim_6.2g/linux/../std.standard
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading work.utils(body)
-# Loading work.tb_cwp(testa)#1
 # Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.cwp(behavioral)#1
-# Loading work.circular_buffer_shft2(behavioral)#1
+# Loading work.utils(body)
+# Loading work.tb_windowed_registerfile(testa)#1
+# Loading /software/mentor/modelsim_6.2g/linux/../synopsys.attributes
+# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_misc(body)
+# Loading work.windowed_register_file(behavioral)#1
+# Loading work.register_file(behavioral)#1
+# Loading work.register_file(behavioral)#2
+# Loading work.priority_encoder(structural)#1
 add wave -r /*
-run -all
-# Break key hit 
-# Simulation stop requested.

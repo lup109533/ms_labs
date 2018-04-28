@@ -14,33 +14,26 @@ entity COUNTER is
 		CLK	:	in	std_logic;
 		RESET	:	in	std_logic;
 		ENABLE	:	in	std_logic;
-		OUTPUT	:	out	std_logic_vector(N downto 0)
+		OUTPUT	:	out	std_logic_vector(N-1 downto 0)
 	);
 end entity;
 
 architecture STRUCTURAL of COUNTER is
 
-	component TFF is
-		port (
-			CLK	:	in	std_logic;
-			RESET	:	in	std_logic;
-			T	:	in	std_logic;
-			Q	:	out	std_logic
-		);
-	end component;
-
-	signal ff_out : std_logic_vector(N downto 0);
+	signal counter : unsigned(N-1 downto 0);
 
 begin
 
-	ff_out(0) <= CLK;
+	count:process (CLK, RESET, ENABLE) is begin
 
-	gen: for i in 0 to N-1 generate
+		if (RESET = '1') then
+			counter <= (others => '0');
+		elsif rising_edge(CLK) and (ENABLE = '1') then
+			counter <= counter + 1;
+		end if; 
 
-		tff_i: TFF port map (ff_out(i), RESET, ENABLE, ff_out(i+1));
+	end process;
 
-	end generate;
-
-	OUTPUT <= ff_out;
+	OUTPUT <= std_logic_vector(counter);
 
 end architecture;

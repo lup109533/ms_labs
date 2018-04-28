@@ -1,14 +1,17 @@
-H 2141964 11 3 0 5 5 0 0 0 0
+H 2141964 11 4 0 6 6 0 0 0 0
 L 4 ieee 19 $MODEL_TECH/../ieee
 L 3 std 18 $MODEL_TECH/../std
+L 8 synopsys 23 $MODEL_TECH/../synopsys
 L 4 work 6 ./work
-D 32 ./work.register_file(behavioral) i0AB4_X^7;71=Dc]UEVf<2 2 1
-D 38 ./work.tb_windowed_registerfile(testa) kQiNICDUXhlQliG=S`P=63 4 1
+D 40 ./work.circular_buffer_shft2(behavioral) =?j>^oA[6;M6lJWgSSbEP3 2 1
+D 26 ./work.counter(structural) 4SfFlMdRjjTWRZd7DHLnE2 3 1
+D 22 ./work.swp(behavioral) o:Z_O0PaA7X4J@EJL6]jn1 4 1
+D 20 ./work.tb_swp(testa) ]bJg8L;n:]iz4X3fakc:z2 5 1
 D 12 ./work.utils jQFieGTk_7G1YFmMP]A5Y0 1 1
 D 18 ./work.utils(body) jQFieGTk_7G1YFmMP]A5Y0 0 1
-D 41 ./work.windowed_register_file(behavioral) o>VV6X_nE19SC7UdT?M`W0 3 1
-2 0  1 R0P>I0]VVXeBJaOD0c?XQ1 2 2 1
-2 0  1 ]Ulgd0H]^8T2zmYkjEM3O2 3 3 1
+2 0  1 bCKV@^TPQ4lY1kY0UKE_02 5 5 1
 2 0  0 jQFieGTk_7G1YFmMP]A5Y0 0 0 1
 2 0  0 `@E3z>B]HUBgQcTjC0I[G2 1 1 1
-2 0  1 SBFTjJEkO[ciK]e4<d9Pk3 4 4 1
+2 0  1 8`X2Uin81Ub^0gAoJ65Wm2 2 2 1
+2 0  0 V_^YBSn0F@J:eJhYK<eWn3 3 3 1
+2 0  1 0:RdWO_>NAj3;47SGnMa]3 4 4 1

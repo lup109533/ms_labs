@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version Z-2007.03-SP1 for linux -- Apr 19, 2007
-#@ # Date:   Fri Apr 20 19:46:44 2018
+#@ # Date:   Fri Apr 27 00:18:29 2018
 #@ # Run by: ms18.12@microelnsys
 #@ 
 
@@ -3656,33 +3656,12 @@ source /home/ms18.12/cap3/syn/.synopsys_dc.setup
 #@ # -- End source /home/ms18.12/cap3/syn/.synopsys_dc.setup
 
 gui_start
-uplevel #0 source /home/ms18.12/cap3/syn/windowed_registerfile.scr
-#@ sh rm -rf work/
-#@ sh mkdir work
-#@ 
-#@ analyze -library WORK -format vhdl {utils.vhd}
-#@ analyze -library WORK -format vhdl {registerfile.vhd}
-#@ analyze -library WORK -format vhdl {windowed_registerfile.vhd}
-#@ 
-#@ elaborate windowed_register_file -architecture BEHAVIORAL -parameters "reg_size = 64, M = 4, N = 4, F = 4"
-#@ 
-#@ compile
-#@ 
-#@ report_area > windowed_registerfile_area1_no_constr.rpr
-#@ report_timing > windowed_registerfile_timing1_no_constr.rpr
-#@ 
-#@ ### Constrained
-#@ create_clock -name "CLK" -period 2 CLK
-#@ set_max_delay 2 -from [all_inputs] -to [all_outputs]
-#@ 
-#@ compile
-#@ 
-#@ report_area > windowed_registerfile_area2_constr.rpr
-#@ report_timing > windowed_registerfile_timing2_constr.rpr
-#@ 
-#@ write -hierarchy -format vhdl -output windowed_registerfile_file_size_32_reg_size_64.vhdl
-#@ write -hierarchy -format ddc -output windowed_registerfile_file_size_32_reg_size_64.ddc
-#@ # -- End source /home/ms18.12/cap3/syn/windowed_registerfile.scr
-
+read_file -format ddc {/home/ms18.12/cap3/syn/priority_encoder_N8.ddc}
 ::cmenus::create_schematic
+analyze -library WORK -format vhdl {/home/ms18.12/cap3/syn/utils.vhd /home/ms18.12/cap3/syn/priority_encoder.vhd}
+elaborate PRIORITY_ENCODER -architecture STRUCTURAL -library DEFAULT -parameters "N = 8"
 ::cmenus::create_schematic
+compile_ultra
+::cmenus::create_schematic
+uplevel #0 report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group
+write -hierarchy -format vhdl -output /home/ms18.12/cap3/syn/priority_encoder_N8.vhdl

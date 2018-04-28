@@ -80,7 +80,7 @@ begin
 						end if;			
 					
 					when s_CALL =>
-						if (CANSAVE = '1') then
+						if (CANSAVE = '0') then
 							state <= s_SAVE;
 						elsif (CALL = '1') then
 							state <= s_CALL;
@@ -105,7 +105,7 @@ begin
 					
 						
 					when s_RETN =>
-						if (CANRESTORE = '1') then
+						if (CANRESTORE = '0') then
 							state <= s_RESTORE;
 						elsif (CALL = '1') then
 							state <= s_CALL;
