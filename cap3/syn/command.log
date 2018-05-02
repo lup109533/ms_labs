@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version Z-2007.03-SP1 for linux -- Apr 19, 2007
-#@ # Date:   Fri Apr 27 00:18:29 2018
+#@ # Date:   Wed May  2 19:04:53 2018
 #@ # Run by: ms18.12@microelnsys
 #@ 
 
@@ -3656,12 +3656,55 @@ source /home/ms18.12/cap3/syn/.synopsys_dc.setup
 #@ # -- End source /home/ms18.12/cap3/syn/.synopsys_dc.setup
 
 gui_start
-read_file -format ddc {/home/ms18.12/cap3/syn/priority_encoder_N8.ddc}
-::cmenus::create_schematic
-analyze -library WORK -format vhdl {/home/ms18.12/cap3/syn/utils.vhd /home/ms18.12/cap3/syn/priority_encoder.vhd}
-elaborate PRIORITY_ENCODER -architecture STRUCTURAL -library DEFAULT -parameters "N = 8"
-::cmenus::create_schematic
-compile_ultra
-::cmenus::create_schematic
-uplevel #0 report_timing -path full -delay max -nworst 1 -max_paths 1 -significant_digits 2 -sort_by group
-write -hierarchy -format vhdl -output /home/ms18.12/cap3/syn/priority_encoder_N8.vhdl
+source windowed_registerfile.scr
+#@ ### Suppress warning about possible out-of-bounds index (not possible)
+#@ suppress_message ELAB-349
+#@ 
+#@ ### Suppress warning about division within log2 function
+#@ suppress_message ELAB-402
+#@ 
+#@ ### Suppress warnings about pins connected to logic 0 or 1 (intentionally connected)
+#@ suppress_message LINT-32
+#@ suppress_message LINT-33
+#@ 
+#@ ### Warning! reg_size=64, M=32, N=32, F=4 took > 40 min
+#@ ### M+3N = 32 exactly with M=20 and N=4 --> 5 bit address
+#@ set reg_size 8
+#@ set M 20
+#@ set N 4
+#@ set F 4
+#@ 
+#@ analyze -library WORK -format vhdl {utils.vhd}
+#@ analyze -library WORK -format vhdl {priority_encoder.vhd}
+#@ analyze -library WORK -format vhdl {counter.vhd}
+#@ analyze -library WORK -format vhdl {circular_buffer_shft2.vhd}
+#@ analyze -library WORK -format vhdl {CWP.vhd}
+#@ analyze -library WORK -format vhdl {SWP.vhd}
+#@ analyze -library WORK -format vhdl {input_filter.vhd}
+#@ analyze -library WORK -format vhdl {registerfile.vhd}
+#@ analyze -library WORK -format vhdl {windowed_registerfile.vhd}
+#@ analyze -library WORK -format vhdl {top_level_windowed_registerfile.vhd}
+#@ 
+#@ elaborate top_level_windowed_register_file -architecture STRUCTURAL -parameters "reg_size = $reg_size, M = $M, N = $N, F = $F"
+#@ 
+#@ compile
+#@ 
+#@ report_area > windowed_registerfile_area1_no_constr.rpr
+#@ report_timing > windowed_registerfile_timing1_no_constr.rpr
+#@ 
+#@ ### Constrained
+#@ create_clock -name "CLK" -period 1 CLK
+#@ set_max_delay 1 -from [all_inputs] -to [all_outputs]
+#@ 
+#@ compile -map_effort high
+#@ 
+#@ report_area > windowed_registerfile_area2_constr.rpr
+#@ report_timing > windowed_registerfile_timing2_constr.rpr
+#@ 
+#@ set output windowed_registerfile_reg_size${reg_size}_M${M}_N${N}_F${F}
+#@ 
+#@ write -hierarchy -format vhdl -output $output.vhdl
+#@ write -hierarchy -format ddc -output $output.ddc
+#@ # -- End source windowed_registerfile.scr
+
+check_design

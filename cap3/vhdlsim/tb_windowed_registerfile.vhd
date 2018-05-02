@@ -9,7 +9,7 @@ end TB_WINDOWED_REGISTERFILE;
 
 architecture TESTA of TB_WINDOWED_REGISTERFILE is
 	
-	constant reg_size	: natural := 64;
+	constant reg_size	: natural := 8;
 	constant M		: natural := 8;
 	constant N		: natural := 4;
 	constant F		: natural := 4;
@@ -66,9 +66,18 @@ PORT MAP (CLK, RESET, ENABLE, IOMODE, RD1, RD2, WR, ADD_WR, ADD_RD1, ADD_RD2, DA
 		WR <= '1';
 		wait for 0 ns;
 
-		for addr in 0 to 2**4-1 loop
+		for addr in 0 to N*3+M-1 loop
 			ADD_WR  <= std_logic_vector(to_unsigned(addr, ADD_WR'length));
 			DATAIN <= (others => '1');
+			wait for 2 ns;
+		end loop;
+
+		WR  <= '0';
+		RD1 <= '1';
+		RD2 <= '1';
+		for addr in 0 to N*3+M-1 loop
+			ADD_RD1  <= std_logic_vector(to_unsigned(addr, ADD_WR'length));
+			ADD_RD2  <= std_logic_vector(to_unsigned(addr, ADD_WR'length));
 			wait for 2 ns;
 		end loop;
 

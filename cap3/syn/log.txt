@@ -1,0 +1,286 @@
+Running PRESTO HDLC
+Compiling Package Declaration UTILS
+Compiling Package Body UTILS
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration PRIORITY_ENCODER
+Compiling Architecture STRUCTURAL of PRIORITY_ENCODER
+Warning:  ./priority_encoder.vhd:19: The architecture STRUCTURAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration COUNTER
+Compiling Architecture STRUCTURAL of COUNTER
+Warning:  ./counter.vhd:21: The architecture STRUCTURAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration CIRCULAR_BUFFER_SHFT2
+Compiling Architecture BEHAVIORAL of CIRCULAR_BUFFER_SHFT2
+Warning:  ./circular_buffer_shft2.vhd:24: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration CWP
+Compiling Architecture BEHAVIORAL of CWP
+Warning:  ./CWP.vhd:32: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration SWP
+Compiling Architecture BEHAVIORAL of SWP
+Warning:  ./SWP.vhd:38: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration INPUT_FILTER
+Compiling Architecture BEHAVIORAL of INPUT_FILTER
+Warning:  ./input_filter.vhd:48: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration REGISTER_FILE
+Compiling Architecture BEHAVIORAL of REGISTER_FILE
+Warning:  ./registerfile.vhd:23: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration WINDOWED_REGISTER_FILE
+Compiling Architecture BEHAVIORAL of WINDOWED_REGISTER_FILE
+Warning:  ./windowed_registerfile.vhd:27: The architecture BEHAVIORAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling Entity Declaration TOP_LEVEL_WINDOWED_REGISTER_FILE
+Compiling Architecture STRUCTURAL of TOP_LEVEL_WINDOWED_REGISTER_FILE
+Warning:  ./top_level_windowed_registerfile.vhd:31: The architecture STRUCTURAL has already been analyzed. It is being replaced. (VHD-4)
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Warning:  ./utils.vhd:175: Floating pin 'OV_ENABLE[7] of cell input' connected to ground. (ELAB-294)
+Warning:  ./utils.vhd:175: Floating pin 'OV_ENABLE[6] of cell input' connected to ground. (ELAB-294)
+Warning:  ./utils.vhd:175: Floating pin 'OV_ENABLE[5] of cell input' connected to ground. (ELAB-294)
+Warning:  ./utils.vhd:175: Floating pin 'OV_ENABLE[4] of cell input' connected to ground. (ELAB-294)
+
+Inferred memory devices in process
+	in routine TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4 line 252 in file
+		'./top_level_windowed_registerfile.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    s_cansave_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4 line 262 in file
+		'./top_level_windowed_registerfile.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  s_canrestore_reg   | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4 line 320 in file
+		'./top_level_windowed_registerfile.vhd'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      OUT1_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+|      OUT2_reg       | Latch |   1   |  N  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/ms18.12/cap3/syn/TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4'.
+Error: Width mismatch on port 'OUTPUT' of reference to 'COUNTER' in 'SWP_reg_size1_N4_F4'. (LINK-3)
+Error: Unable to match ports of cell swp_controller/addr_counter ('COUNTER') to 'COUNTER_N2'. (LINK-25)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_0' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_7' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_6' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_5' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_4' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_3' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_2' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_1' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'PRIORITY_ENCODER_N4_0' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'PRIORITY_ENCODER_N4_1' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has '10' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Information: There are 11 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'register_file_reg_size1_file_size20'
+  Processing 'windowed_register_file_reg_size1_M20_N4_F4'
+  Processing 'CIRCULAR_BUFFER_SHFT2_N4'
+  Processing 'SWP_reg_size1_N4_F4'
+  Processing 'CIRCULAR_BUFFER_SHFT2_N8'
+  Processing 'CWP_N8'
+  Processing 'INPUT_FILTER_reg_size1_M20_N4_F4'
+  Processing 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4'
+Error: Width mismatch on port 'OUTPUT' of reference to 'COUNTER' in 'SWP_reg_size1_N4_F4'. (LINK-3)
+Error: Unable to match ports of cell swp_controller/addr_counter ('COUNTER') to 'COUNTER_N2'. (LINK-25)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_0' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_7' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_6' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_5' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_4' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_3' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_2' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_1' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'PRIORITY_ENCODER_N4_0' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'PRIORITY_ENCODER_N4_1' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has no optimization constraints set. (OPT-108)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'register_file_reg_size1_file_size20'
+  Mapping 'register_file_reg_size1_file_size20'
+  Structuring 'CIRCULAR_BUFFER_SHFT2_N4'
+  Mapping 'CIRCULAR_BUFFER_SHFT2_N4'
+  Structuring 'CIRCULAR_BUFFER_SHFT2_N8'
+  Mapping 'CIRCULAR_BUFFER_SHFT2_N8'
+  Structuring 'windowed_register_file_reg_size1_M20_N4_F4'
+  Mapping 'windowed_register_file_reg_size1_M20_N4_F4'
+  Structuring 'SWP_reg_size1_N4_F4'
+  Mapping 'SWP_reg_size1_N4_F4'
+  Structuring 'CWP_N8'
+  Mapping 'CWP_N8'
+  Structuring 'INPUT_FILTER_reg_size1_M20_N4_F4'
+  Mapping 'INPUT_FILTER_reg_size1_M20_N4_F4'
+  Structuring 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4'
+  Mapping 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4'
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     603.6      0.00       0.0       0.0                          
+    0:00:02     603.6      0.00       0.0       0.0                          
+    0:00:02     603.6      0.00       0.0       0.0                          
+    0:00:02     603.3      0.00       0.0       0.0                          
+    0:00:02     603.3      0.00       0.0       0.0                          
+    0:00:02     603.3      0.00       0.0       0.0                          
+    0:00:02     603.3      0.00       0.0       0.0                          
+    0:00:02     603.3      0.00       0.0       0.0                          
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     603.3      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     603.3      0.00       0.0       0.0                          
+    0:00:02     603.3      0.00       0.0       0.0                          
+    0:00:02     596.4      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+    0:00:02     593.7      0.00       0.0       0.0                          
+Loading db file '/home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has '10' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has '10' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Warning: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has '10' unresolved references. For more detailed information, use the "link" command. (UID-341)
+
+Information: There are 22 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'register_file_reg_size1_file_size20'
+  Processing 'windowed_register_file_reg_size1_M20_N4_F4'
+  Processing 'CIRCULAR_BUFFER_SHFT2_N4'
+  Processing 'SWP_reg_size1_N4_F4'
+  Processing 'CIRCULAR_BUFFER_SHFT2_N8'
+  Processing 'CWP_N8'
+  Processing 'INPUT_FILTER_reg_size1_M20_N4_F4'
+  Processing 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4'
+Error: Width mismatch on port 'OUTPUT' of reference to 'COUNTER' in 'SWP_reg_size1_N4_F4'. (LINK-3)
+Error: Unable to match ports of cell swp_controller/addr_counter ('COUNTER') to 'COUNTER_N2'. (LINK-25)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_0' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_7' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_6' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_5' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_4' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_3' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_2' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'register_file_reg_size1_file_size4_1' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'PRIORITY_ENCODER_N4_0' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+Warning: Unable to resolve reference 'PRIORITY_ENCODER_N4_1' in 'windowed_register_file_reg_size1_M20_N4_F4'. (LINK-5)
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     848.0      0.00       0.0       2.0                          
+    0:00:01     589.7      0.00       0.0       0.0                          
+    0:00:01     589.7      0.00       0.0       0.0                          
+    0:00:01     589.7      0.00       0.0       0.0                          
+    0:00:01     589.5      0.00       0.0       0.0                          
+    0:00:01     589.5      0.00       0.0       0.0                          
+    0:00:01     589.5      0.00       0.0       0.0                          
+    0:00:01     589.5      0.00       0.0       0.0                          
+    0:00:01     589.5      0.00       0.0       0.0                          
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     589.5      0.00       0.0       0.0                          
+    0:00:02     579.3      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+   ELAPSED            WORST NEG TOTAL NEG  DESIGN                            
+    TIME      AREA      SLACK     SLACK   RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     579.3      0.00       0.0       0.0                          
+    0:00:02     579.3      0.00       0.0       0.0                          
+    0:00:02     576.7      0.00       0.0       0.0                          
+    0:00:02     575.6      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+    0:00:02     575.1      0.00       0.0       0.0                          
+Loading db file '/home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db'
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has '10' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing vhdl file '/home/ms18.12/cap3/syn/windowed_registerfile_file_size_32_reg_size_64.vhdl'.
+Warning: Design 'TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size1_M20_N4_F4' has '10' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Writing ddc file 'windowed_registerfile_file_size_32_reg_size_64.ddc'.
+1

@@ -73,6 +73,14 @@ PORT MAP (CLK,RESET,ENABLE,RD1,RD2,WR,ADD_WR,ADD_RD1,ADD_RD2,DATAIN,OUT1,OUT2);
 		DATAIN  <= X"23FC9A345323BB11";
 		wait for 2 ns;
 
+		WR      <= '1';
+		RD1     <= '0';
+		RD2     <= '1';
+		ADD_RD2 <= "11110";
+		ADD_WR  <= "11110";
+		DATAIN  <= X"0000000000000111";
+		wait for 2 ns;
+
 		WR <= '0';
 		RD1     <= '1';
 		RD2     <= '1';

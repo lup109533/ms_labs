@@ -1,26 +1,25 @@
 Information: Updating design information... (UID-85)
-Warning: Design 'windowed_register_file_reg_size64_M4_N4_F4' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
  
 ****************************************
 Report : area
-Design : windowed_register_file_reg_size64_M4_N4_F4
+Design : TOP_LEVEL_WINDOWED_REGISTER_FILE_reg_size8_M20_N4_F4
 Version: Z-2007.03-SP1
-Date   : Fri Apr 20 19:49:12 2018
+Date   : Wed May  2 19:06:24 2018
 ****************************************
 
 Library(s) Used:
 
     NangateOpenCellLibrary (File: /home/mariagrazia.graziano/do/libnangate/NangateOpenCellLibrary_typical_ecsm.db)
 
-Number of ports:              214
-Number of nets:              2363
-Number of cells:             1198
-Number of references:          29
+Number of ports:               60
+Number of nets:               161
+Number of cells:               35
+Number of references:          13
 
-Combinational area:       10110.128086
-Noncombinational area:    15807.315438
+Combinational area:       2271.374018
+Noncombinational area:    2779.433908
 Net Interconnect area:      undefined  (Wire load has zero net area)
 
-Total cell area:          25917.443359
+Total cell area:          5050.808105
 Total area:                 undefined
 1

@@ -3,20 +3,16 @@ m255
 cModel Technology
 d/home/ms18.12/cap3/vhdlsim
 T_opt
-VJcOkB[NF@nXEgF9Xlz73K2
-06 19 4 ./work tb_priority_encoder test 1
+V;9i>51:_3zVjCP[Th[T2T1
+06 35 5 ./work tb_top_level_windowed_register_file testa 1
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
 T_opt1
-VC0a8ZV>8kZQUzU0oK9OiA3
-06 6 5 ./work tb_swp testa 1
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
 T_opt2
-V??XPIJPY>Sjl>4m4G>gnM2
-06 24 5 ./work tb_windowed_registerfile testa 1
 o-quiet -auto_acc_if_foreign -work work
 tExplicit 1
 OE;O;6.2g;35
@@ -38,14 +34,14 @@ DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work circular_buffer_shft2 ?mQJVU3hoCM]@aG8@Bn_M2
-l28
-L24
-V=?j>^oA[6;M6lJWgSSbEP3
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
+l28
+L24
+V=?j>^oA[6;M6lJWgSSbEP3
+OE;C;6.2g;35
 tExplicit 1
 Ecounter
 w1524766040
@@ -65,14 +61,14 @@ DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work counter 5?::HXmL9>fNNYcPGI7302
-l25
-L21
-V4SfFlMdRjjTWRZd7DHLnE2
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
+l25
+L21
+V4SfFlMdRjjTWRZd7DHLnE2
+OE;C;6.2g;35
 tExplicit 1
 Ecwp
 w1524759248
@@ -88,18 +84,52 @@ OE;C;6.2g;35
 32
 tExplicit 1
 Abehavioral
+DE work circular_buffer_shft2 ?mQJVU3hoCM]@aG8@Bn_M2
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work cwp 2Oa?Tkh<CF?Ng>_<KA1j53
-l55
-L32
-VAdBd7UCz1lBQ5:`7kPLeI3
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
+l55
+L32
+VAdBd7UCz1lBQ5:`7kPLeI3
+OE;C;6.2g;35
+tExplicit 1
+Einput_filter
+w1525006069
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP synopsys attributes oP@SNI848YZ9iazan5Mg_2
+DP ieee std_logic_misc D2f;@P3IKJA9T^H8HI[9K0
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8input_filter.vhd
+Finput_filter.vhd
+l0
+L8
+VB6h];F0XB2Il>MLT=Q8oE1
+OE;C;6.2g;35
+32
+tExplicit 1
+Abehavioral
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP synopsys attributes oP@SNI848YZ9iazan5Mg_2
+DP ieee std_logic_misc D2f;@P3IKJA9T^H8HI[9K0
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work input_filter B6h];F0XB2Il>MLT=Q8oE1
+32
+M5 ieee std_logic_1164
+M4 ieee numeric_std
+M3 ieee std_logic_misc
+M2 synopsys attributes
+M1 work utils
+l50
+L48
+Vd8[B=G2oA:3an;aC0Ad]n3
+OE;C;6.2g;35
 tExplicit 1
 Epriority_encoder
 w1524957276
@@ -129,7 +159,7 @@ VZ>ROc@7=e]IoOX;6l78CV0
 OE;C;6.2g;35
 tExplicit 1
 Eregister_file
-w1524247989
+w1525003101
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
@@ -146,17 +176,17 @@ DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work register_file fNW:MPbSN6UF^OEjgDlbQ3
-l29
-L23
-Vi0AB4_X^7;71=Dc]UEVf<2
-OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
+l29
+L23
+Vi0AB4_X^7;71=Dc]UEVf<2
+OE;C;6.2g;35
 tExplicit 1
 Eswp
-w1524766412
+w1525261731
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP synopsys attributes oP@SNI848YZ9iazan5Mg_2
 DP ieee std_logic_misc D2f;@P3IKJA9T^H8HI[9K0
@@ -166,27 +196,29 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 FSWP.vhd
 l0
 L16
-VeP14fEXH^CTYjR_h9HcL33
+VkV]HAP@27EA0dK3CbUz@h1
 OE;C;6.2g;35
 32
 tExplicit 1
 Abehavioral
+DE work counter 5?::HXmL9>fNNYcPGI7302
+DE work circular_buffer_shft2 ?mQJVU3hoCM]@aG8@Bn_M2
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP synopsys attributes oP@SNI848YZ9iazan5Mg_2
 DP ieee std_logic_misc D2f;@P3IKJA9T^H8HI[9K0
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-DE work swp eP14fEXH^CTYjR_h9HcL33
-l74
-L38
-Vo:Z_O0PaA7X4J@EJL6]jn1
-OE;C;6.2g;35
+DE work swp kV]HAP@27EA0dK3CbUz@h1
 32
 M5 ieee std_logic_1164
 M4 ieee numeric_std
 M3 ieee std_logic_misc
 M2 synopsys attributes
 M1 work utils
+l89
+L39
+VHo6;0l?3gQzK`hlQDb5mO2
+OE;C;6.2g;35
 tExplicit 1
 Etb_counter
 w1524761203
@@ -244,28 +276,27 @@ w1524957374
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
-32
 8tb_priority_encoder.vhd
 Ftb_priority_encoder.vhd
 l0
 L7
 VdHWH@j9fWFcF>Kf99P:BF1
 OE;C;6.2g;35
+32
 tExplicit 1
 Atest
-DE work priority_encoder f3`B7X0diRQmoUM@X@FfK3
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work tb_priority_encoder dHWH@j9fWFcF>Kf99P:BF1
-32
-M3 ieee std_logic_1164
-M2 ieee numeric_std
-M1 work utils
 l25
 L10
 V_?3B:zLDVfCAE[;0B_Um<1
 OE;C;6.2g;35
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work utils
 tExplicit 1
 Etb_swp
 w1524766700
@@ -291,8 +322,36 @@ OE;C;6.2g;35
 M2 ieee std_logic_1164
 M1 work utils
 tExplicit 1
+Etb_top_level_windowed_register_file
+w1525260513
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8tb_top_level_windowed_registerfile.vhd
+Ftb_top_level_windowed_registerfile.vhd
+l0
+L7
+V<8<CcEA3P3??[O]Wz8:4a1
+OE;C;6.2g;35
+32
+tExplicit 1
+Atesta
+DE work top_level_windowed_register_file =ek?JfS1KYDMITEd4ZH=m2
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work tb_top_level_windowed_register_file <8<CcEA3P3??[O]Wz8:4a1
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work utils
+l67
+L10
+VSoKNc5e<j1@Pm2[1_BG7[3
+OE;C;6.2g;35
+tExplicit 1
 Etb_windowed_registerfile
-w1524937994
+w1525001315
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
@@ -311,7 +370,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work tb_windowed_registerfile X?KOHl>7Z^^DP^Wj4S>Ie2
 l50
 L10
-VSbhF[QSQPb3mB;XHh>d9U2
+V?nB_HZHSz5IKnMFgM@ENI3
 OE;C;6.2g;35
 32
 M3 ieee std_logic_1164
@@ -319,7 +378,7 @@ M2 ieee numeric_std
 M1 work utils
 tExplicit 1
 Etbregisterfile
-w1523527986
+w1525218592
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 8tb_registerfile.vhd
@@ -336,7 +395,7 @@ DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work tbregisterfile _PJbKTFZ:;k6dNJI8Qh9C3
 l42
 L9
-VZ@4nHYog3[_6Y^?z7[ZVT1
+VkYb6NJDhN1GCTXYch37S[1
 OE;C;6.2g;35
 32
 M2 ieee std_logic_1164
@@ -369,8 +428,39 @@ M3 ieee std_logic_1164
 M2 ieee numeric_std
 M1 work utils
 tExplicit 1
+Etop_level_windowed_register_file
+w1525254912
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+8top_level_windowed_registerfile.vhd
+Ftop_level_windowed_registerfile.vhd
+l0
+L7
+V=ek?JfS1KYDMITEd4ZH=m2
+OE;C;6.2g;35
+32
+tExplicit 1
+Astructural
+DE work windowed_register_file lk`NzQOdTiIH]N0PWDznY3
+DE work swp kV]HAP@27EA0dK3CbUz@h1
+DE work cwp 2Oa?Tkh<CF?Ng>_<KA1j53
+DE work input_filter B6h];F0XB2Il>MLT=Q8oE1
+DP work utils fSlf<EA?aObMhl1VoY86c2
+DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work top_level_windowed_register_file =ek?JfS1KYDMITEd4ZH=m2
+32
+M3 ieee std_logic_1164
+M2 ieee numeric_std
+M1 work utils
+l175
+L33
+V[KbaD7<hl1W:=fN<Qjc;M2
+OE;C;6.2g;35
+tExplicit 1
 Putils
-w1523527760
+w1525193308
 8utils.vhd
 Futils.vhd
 l0
@@ -385,12 +475,12 @@ DB work utils fSlf<EA?aObMhl1VoY86c2
 32
 l0
 L1
-VjQFieGTk_7G1YFmMP]A5Y0
+V17fZBeb0H=^<4GH:WO:NJ3
 OE;C;6.2g;35
 tExplicit 1
 nbody
 Ewindowed_register_file
-w1524956800
+w1525262817
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP synopsys attributes oP@SNI848YZ9iazan5Mg_2
 DP ieee std_logic_misc D2f;@P3IKJA9T^H8HI[9K0
@@ -405,20 +495,22 @@ OE;C;6.2g;35
 32
 tExplicit 1
 Abehavioral
+DE work priority_encoder f3`B7X0diRQmoUM@X@FfK3
+DE work register_file fNW:MPbSN6UF^OEjgDlbQ3
 DP work utils fSlf<EA?aObMhl1VoY86c2
 DP synopsys attributes oP@SNI848YZ9iazan5Mg_2
 DP ieee std_logic_misc D2f;@P3IKJA9T^H8HI[9K0
 DP ieee numeric_std =NSdli^?T5OD8;4F<blj<3
 DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
 DE work windowed_register_file lk`NzQOdTiIH]N0PWDznY3
-l105
-L25
-V]=`fDXLWWn=NLK^ogH_<O2
-OE;C;6.2g;35
 32
 M5 ieee std_logic_1164
 M4 ieee numeric_std
 M3 ieee std_logic_misc
 M2 synopsys attributes
 M1 work utils
+l111
+L27
+V;HKkk4VQIK^C0JzI8UL2>1
+OE;C;6.2g;35
 tExplicit 1
