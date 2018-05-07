@@ -1,0 +1,83 @@
+m255
+13
+cModel Technology
+d/home/ms18.12/cap4/vhdlsim
+T_opt
+VE0lIX3WNJMYUS<ZRU2GK<1
+06 6 2 ./work fsm_tb tb 0
+o-quiet -auto_acc_if_foreign -work work
+tExplicit 1
+OE;O;6.2g;35
+Efsm_tb
+w1525711074
+DP work mytypes iU8AoT9?[<C60d9jZXOX;0
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+8tb_fsmcu.vhd
+Ftb_fsmcu.vhd
+l0
+L8
+Vc3CmXzVA@gPV7A6AVMh3E3
+OE;C;6.2g;35
+tExplicit 1
+Atb
+DE work fsmcu WF6aFJgdB`Ha34W7Qg_@C0
+DP work mytypes iU8AoT9?[<C60d9jZXOX;0
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fsm_tb c3CmXzVA@gPV7A6AVMh3E3
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work mytypes
+l65
+L11
+VCo9aolR7`g`DK]N7iVk<_3
+OE;C;6.2g;35
+tExplicit 1
+Efsmcu
+w1525710819
+DP work mytypes iU8AoT9?[<C60d9jZXOX;0
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+8fsmcu.vhd
+Ffsmcu.vhd
+l0
+L7
+VWF6aFJgdB`Ha34W7Qg_@C0
+OE;C;6.2g;35
+tExplicit 1
+Afsm_arch
+DP work mytypes iU8AoT9?[<C60d9jZXOX;0
+DP ieee std_logic_arith GJbAT?7@hRQU9IQ702DT]2
+DP ieee std_logic_unsigned hEMVMlaNCR^<OOoVNV;m90
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+DE work fsmcu WF6aFJgdB`Ha34W7Qg_@C0
+32
+M4 ieee std_logic_1164
+M3 ieee std_logic_unsigned
+M2 ieee std_logic_arith
+M1 work mytypes
+l65
+L32
+VF;iGnONXcMeh4V]:O7[?a0
+OE;C;6.2g;35
+tExplicit 1
+Pmytypes
+DP ieee std_logic_1164 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+M1 ieee std_logic_1164
+w1524737342
+8myTypes.vhd
+FmyTypes.vhd
+l0
+L4
+ViU8AoT9?[<C60d9jZXOX;0
+OE;C;6.2g;35
+tExplicit 1

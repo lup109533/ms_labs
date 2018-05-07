@@ -27,43 +27,15 @@
 # Loading work.register_file(behavioral)#1
 # Loading work.register_file(behavioral)#2
 # Loading work.priority_encoder(structural)#1
-add wave -r /*
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_top_level_windowed_register_file/rg/rf
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /tb_top_level_windowed_register_file/rg/rf
-run
-run
-run
-run
-run
-run
-restart
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading /software/mentor/modelsim_6.2g/linux/../std.standard
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_1164(body)
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.numeric_std(body)
-# Loading work.utils(body)
-# Loading work.tb_top_level_windowed_register_file(testa)#1
-# Loading work.top_level_windowed_register_file(structural)#1
-# Loading /software/mentor/modelsim_6.2g/linux/../synopsys.attributes
-# Loading /software/mentor/modelsim_6.2g/linux/../ieee.std_logic_misc(body)
-# Loading work.input_filter(behavioral)#1
-# Loading work.cwp(behavioral)#1
-# Loading work.circular_buffer_shft2(behavioral)#1
-# Loading work.swp(behavioral)#1
-# Loading work.counter(structural)
-# Loading work.windowed_register_file(behavioral)#1
-# Loading work.register_file(behavioral)#1
-# Loading work.register_file(behavioral)#2
-# Loading work.priority_encoder(structural)#1
 add wave sim:/tb_top_level_windowed_register_file/*
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb_top_level_windowed_register_file/rg/rf
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /tb_top_level_windowed_register_file/rg/rf
+run
+run
+run
 run
 run
 run

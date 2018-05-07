@@ -1,0 +1,42 @@
+$date
+	Mon May  7 18:42:53 2018
+$end
+$version
+	ModelSim Version 6.2g
+$end
+$timescale
+	1ns
+$end
+$scope module fsm_tb $end
+$var wire 1 ! s_en1 $end
+$var wire 1 " s_rf1 $end
+$var wire 1 # s_rf2 $end
+$var wire 1 $ s_wf1 $end
+$var wire 1 % s_en2 $end
+$var wire 1 & s_s1 $end
+$var wire 1 ' s_s2 $end
+$var wire 1 ( s_alu1 $end
+$var wire 1 ) s_alu2 $end
+$var wire 1 * s_en3 $end
+$var wire 1 + s_rm $end
+$var wire 1 , s_wm $end
+$var wire 1 - s_s3 $end
+$var wire 1 . s_opcode [5] $end
+$var wire 1 / s_opcode [4] $end
+$var wire 1 0 s_opcode [3] $end
+$var wire 1 1 s_opcode [2] $end
+$var wire 1 2 s_opcode [1] $end
+$var wire 1 3 s_opcode [0] $end
+$var wire 1 4 s_func [10] $end
+$var wire 1 5 s_func [9] $end
+$var wire 1 6 s_func [8] $end
+$var wire 1 7 s_func [7] $end
+$var wire 1 8 s_func [6] $end
+$var wire 1 9 s_func [5] $end
+$var wire 1 : s_func [4] $end
+$var wire 1 ; s_func [3] $end
+$var wire 1 < s_func [2] $end
+$var wire 1 = s_func [1] $end
+$var wire 1 > s_func [0] $end
+$var wire 1 ? s_clk $end
+$var wire 1 @ s_rst $end

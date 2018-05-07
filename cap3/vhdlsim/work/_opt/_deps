@@ -11,20 +11,20 @@ D 35 ./work.priority_encoder(structural) Z>ROc@7=e]IoOX;6l78CV0 8 1
 D 32 ./work.register_file(behavioral) i0AB4_X^7;71=Dc]UEVf<2 7 1
 D 22 ./work.swp(behavioral) Ho6;0l?3gQzK`hlQDb5mO2 6 1
 D 49 ./work.tb_top_level_windowed_register_file(testa) SoKNc5e<j1@Pm2[1_BG7[3 11 1
-D 51 ./work.top_level_windowed_register_file(structural) [KbaD7<hl1W:=fN<Qjc;M2 10 1
+D 51 ./work.top_level_windowed_register_file(structural) 4CeA;<b=hz[A^NXJGhVXY1 10 1
 D 12 ./work.utils 17fZBeb0H=^<4GH:WO:NJ3 1 1
 D 18 ./work.utils(body) 17fZBeb0H=^<4GH:WO:NJ3 0 1
 D 41 ./work.windowed_register_file(behavioral) ;HKkk4VQIK^C0JzI8UL2>1 9 1
+2 0  1 JTH?k>MK8VMd>^^m;6]6S1 11 10 1
+2 0  1 ?mhQ<We1==CNFXcEAFIlY1 12 11 1
 2 0  1 fL5n<gQUX7i;<Kg;8H_]a0 3 3 1
 2 0  1 b93c@71BU0R:hOFg;jYV32 4 4 1
-2 0  0 V_^YBSn0F@J:eJhYK<eWn3 5 5 1
-2 0  1 zjGmgO4ERf]YJ:zBfCL8Q2 2 2 1
-2 0  0 `@E3z>B]HUBgQcTjC0I[G2 1 1 1
 2 0  0 17fZBeb0H=^<4GH:WO:NJ3 0 0 1
+2 0  0 `@E3z>B]HUBgQcTjC0I[G2 1 1 1
+2 0  0 V_^YBSn0F@J:eJhYK<eWn3 5 5 1
 2 0  1 ];]]C=MG_b0`>JO>5BMG<0 6 6 1
 2 0  1 86d@Bb5=DOD>z5@b3ebOe2 7 7 1
 2 0  2 OWNW0YVNgUJH=j1n:R[RB0 8 7 1
 2 0  1 ]_X0czKnCbW]?@W3YQF2L1 9 8 1
 2 0  1 6h`U[MCg4Vf3:9_QBmCz40 10 9 1
-2 0  1 9nPZ23U9XI24`?3DJCa[o0 11 10 1
-2 0  1 ?mhQ<We1==CNFXcEAFIlY1 12 11 1
+2 0  1 zjGmgO4ERf]YJ:zBfCL8Q2 2 2 1
