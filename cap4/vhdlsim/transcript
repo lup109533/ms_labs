@@ -19,4 +19,3 @@
 # Loading work.dlx_cu(behavioral)
 add wave sim:/dlx_cu_tb/*
 run
-run

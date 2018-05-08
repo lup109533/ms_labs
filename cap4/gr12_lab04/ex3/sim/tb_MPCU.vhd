@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.myTypes.all;
+use work.MPCU_types.all;
 
-entity DLX_CU_TB is
+entity MPCU_TB is
 end entity;
 
-architecture TEST of DLX_CU_TB is
+architecture TEST of MPCU_TB is
 
-	component DLX_CU
+	component MPCU
 	  port (
 	        -- FIRST PIPE STAGE OUTPUTS
 		EN1    : out std_logic;               -- enables the register file and the pipeline registers
@@ -41,7 +41,7 @@ architecture TEST of DLX_CU_TB is
 
 begin
 
-	UUT: DLX_CU port map (EN1, RF1, RF2, WF1, EN2, S1, S2, ALU1, ALU2, EN3, RM, WM, S3, OPCODE, FUNC, CLK, RST);
+	UUT: MPCU port map (EN1, RF1, RF2, WF1, EN2, S1, S2, ALU1, ALU2, EN3, RM, WM, S3, OPCODE, FUNC, CLK, RST);
 
 	clk_gen: process is
 	begin
@@ -54,6 +54,7 @@ begin
 		end if;
 	end process;
 
+	--- Iterate over every instruction in the set.
 	stimulus: process is
 	begin
 		RST <= '0';
@@ -64,11 +65,11 @@ begin
 			OPCODE <= get_opcode(s_opcode);
 			if (s_opcode = tRTYPE) then for s_func in func_t loop
 				FUNC <= get_func(s_func);
-				wait for 2 ns;
+				wait for 6 ns;
 			end loop; else
 				FUNC <= RTYPE_ADD;
 			end if;
-			wait for 2 ns;
+			wait for 6 ns;
 		end loop;
 
 		RST <= '0';

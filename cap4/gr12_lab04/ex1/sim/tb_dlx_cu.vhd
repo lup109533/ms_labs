@@ -54,6 +54,7 @@ begin
 		end if;
 	end process;
 
+	--- Iterate over every instruction in the set.
 	stimulus: process is
 	begin
 		RST <= '0';
@@ -66,7 +67,7 @@ begin
 				FUNC <= get_func(s_func);
 				wait for 2 ns;
 			end loop; else
-				FUNC <= RTYPE_ADD;
+				FUNC <= RTYPE_ADD; -- Default to 0
 			end if;
 			wait for 2 ns;
 		end loop;

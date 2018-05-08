@@ -3,10 +3,10 @@ L 4 ieee 19 $MODEL_TECH/../ieee
 L 3 std 18 $MODEL_TECH/../std
 L 4 work 6 ./work
 D 25 ./work.dlx_cu(behavioral) 8?fI94@cKFY;8mIiobSmS2 2 1
-D 22 ./work.dlx_cu_tb(test) R:^G9W50gfgXeT87:Z3Q11 3 1
+D 22 ./work.dlx_cu_tb(test) P9NefL7][SeXC?]TK?m8_0 3 1
 D 14 ./work.mytypes KkWja@IEGf;VcBJF`17E43 1 1
 D 20 ./work.mytypes(body) KkWja@IEGf;VcBJF`17E43 0 1
+2 0  0 Xdnz?F;XQFWWN2]bCaSaU0 3 3 1
 2 0  0 KkWja@IEGf;VcBJF`17E43 0 0 1
 2 0  0 `]Qbinfb4J[FCMFoO7AkP1 1 1 1
-2 0  0 R8@9BQ>Q?HBOZWP^=iLc=1 3 3 1
 2 0  0 Y8T2CFMaRLjn43>6@o9^a1 2 2 1
