@@ -63,7 +63,7 @@ begin
 	begin
 		
 		if (RST = '0') then
-			counter <= "11";	-- First clock cycle past RST value becomes "00"
+			counter <= "00";
 		elsif rising_edge(CLK) then
 			if (counter = "10") then -- If 3
 				counter <= "00";

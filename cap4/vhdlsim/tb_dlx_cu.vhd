@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.MPCU_types.all;
+use work.myTypes.all;
 
-entity MPCU_TB is
+entity DLX_CU_TB is
 end entity;
 
-architecture TEST of MPCU_TB is
+architecture TEST of DLX_CU_TB is
 
-	component MPCU
+	component DLX_CU
 	  port (
 	        -- FIRST PIPE STAGE OUTPUTS
 		EN1    : out std_logic;               -- enables the register file and the pipeline registers
@@ -41,7 +41,7 @@ architecture TEST of MPCU_TB is
 
 begin
 
-	UUT: MPCU port map (EN1, RF1, RF2, WF1, EN2, S1, S2, ALU1, ALU2, EN3, RM, WM, S3, OPCODE, FUNC, CLK, RST);
+	UUT: DLX_CU port map (EN1, RF1, RF2, WF1, EN2, S1, S2, ALU1, ALU2, EN3, RM, WM, S3, OPCODE, FUNC, CLK, RST);
 
 	clk_gen: process is
 	begin

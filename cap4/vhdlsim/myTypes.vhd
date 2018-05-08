@@ -32,7 +32,87 @@ package myTypes is
     constant ITYPE_L_MEM1 : std_logic_vector(OP_CODE_SIZE - 1 downto 0) :=  "001101";    -- L_MEM1  RS1,RD,INP1
     constant ITYPE_L_MEM2 : std_logic_vector(OP_CODE_SIZE - 1 downto 0) :=  "001110";    -- L_MEM2  RS1,RD,INP1
 
--- Change the values of the instructions coding as you want, depending also on the type of control  unit choosen
+-- For testbenches
+	type opcode_t is (tRTYPE,
+			  tITYPE_ADDI1,
+			  tITYPE_SUBI1,
+			  tITYPE_ANDI1,
+			  tITYPE_ORI1,
+			  tITYPE_ADDI2,
+			  tITYPE_SUBI2,
+			  tITYPE_ANDI2,
+			  tITYPE_ORI2,
+			  tITYPE_MOV,
+			  tITYPE_S_REG1,
+			  tITYPE_S_REG2,
+			  tITYPE_S_MEM2,
+			  tITYPE_L_MEM1,
+			  tITYPE_L_MEM2);
+
+	type func_t is (tRTYPE_ADD,
+			tRTYPE_SUB,
+			tRTYPE_AND,
+			tRTYPE_OR);
+
+	subtype ret_opcode is std_logic_vector(OP_CODE_SIZE-1 downto 0);
+	subtype ret_func   is std_logic_vector(FUNC_SIZE-1 downto 0);
+
+	function get_opcode (opcode : opcode_t) return ret_opcode;
+	function get_func   (func   : func_t)   return ret_func;
+
 
 end myTypes;
 
+package body myTypes is
+
+	function get_opcode (opcode : opcode_t) return ret_opcode is
+	begin
+		case (opcode) is
+			when tRTYPE =>
+				return RTYPE;
+			when tITYPE_ADDI1 =>
+				return ITYPE_ADDI1;
+			when tITYPE_SUBI1 =>
+				return ITYPE_SUBI1;
+			when tITYPE_ANDI1 =>
+				return ITYPE_ANDI1;
+			when tITYPE_ORI1 =>
+				return ITYPE_ORI1;
+			when tITYPE_ADDI2 =>
+				return ITYPE_ADDI2;
+			when tITYPE_SUBI2 =>
+				return ITYPE_SUBI2;
+			when tITYPE_ANDI2 =>
+				return ITYPE_ANDI2;
+			when tITYPE_ORI2 =>
+				return ITYPE_ORI2;
+			when tITYPE_MOV =>
+				return ITYPE_MOV;
+			when tITYPE_S_REG1 =>
+				return ITYPE_S_REG1;
+			when tITYPE_S_REG2 =>
+				return ITYPE_S_REG2;
+			when tITYPE_S_MEM2 =>
+				return ITYPE_S_MEM2;
+			when tITYPE_L_MEM1 =>
+				return ITYPE_L_MEM1;
+			when tITYPE_L_MEM2 =>
+				return ITYPE_L_MEM2;
+			end case;
+	end function;
+
+	function get_func (func : func_t) return ret_func is
+	begin
+		case (func) is
+			when tRTYPE_ADD =>
+				return RTYPE_ADD;
+			when tRTYPE_SUB =>
+				return RTYPE_SUB;
+			when tRTYPE_AND =>
+				return RTYPE_AND;
+			when tRTYPE_OR =>
+				return RTYPE_OR;
+			end case;
+	end function;
+
+end myTypes;

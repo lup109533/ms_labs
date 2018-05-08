@@ -46,360 +46,199 @@ begin
 
 	---- Assumptions about datapath: s1,s2 = '0' selects register, s1,s2 = '1' selects input 
 	----                             s3 = '0' selects memory cell, s3 = '1' selects ALU output
-	LUT: process (OPCODE, FUNC) is begin
 
-		if (OPCODE = RTYPE) then
-			case FUNC is
-				when RTYPE_ADD =>
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when RTYPE_SUB =>
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '1';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when RTYPE_AND =>
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '1';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when RTYPE_OR =>
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '1';
-					s_alu2 <= '1';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-			end case;
-		else
-			case OPCODE is
-				when ITYPE_ADDI1  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_SUBI1  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '1';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_ANDI1  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '1';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_ORI1  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '1';
-					s_alu2 <= '1';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_ADDI2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_SUBI2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '1';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_ANDI2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '1';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_ORI2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '1';
-					s_alu2 <= '1';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_MOV  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_S_REG1  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
+	--------------------------
+	------    Stage 1    -----
+	--------------------------
+	s_en1 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                           (OPCODE = ITYPE_ADDI1)  or
+                           (OPCODE = ITYPE_SUBI1)  or
+                           (OPCODE = ITYPE_ANDI1)  or
+                           (OPCODE = ITYPE_ORI1)   or
+                           (OPCODE = ITYPE_ADDI2)  or
+                           (OPCODE = ITYPE_SUBI2)  or
+                           (OPCODE = ITYPE_ANDI2)  or
+                           (OPCODE = ITYPE_ORI2)   or
+                           (OPCODE = ITYPE_MOV)    or
+                           (OPCODE = ITYPE_S_REG1) or
+                           (OPCODE = ITYPE_S_REG2) or
+                           (OPCODE = ITYPE_S_MEM2) or
+                           (OPCODE = ITYPE_L_MEM1) or
+                           (OPCODE = ITYPE_L_MEM2)) else '0';
 
-				when ITYPE_S_REG2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= ALU_OUT_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_S_MEM2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '0';
-					s_wm   <= '1';
-					s_s3   <= MEMORY_SELECT;
-					s_wf1  <= '0';
-					----
-				when ITYPE_L_MEM1  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '0';
-					s_rf2  <= '1';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= INPUT_SELECT;
-					s_s2   <= REGISTER_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '1';
-					s_wm   <= '0';
-					s_s3   <= MEMORY_SELECT;
-					s_wf1  <= '1';
-					----
-				when ITYPE_L_MEM2  => 
-					---- stage 1
-					s_en1  <= '1';
-					s_rf1  <= '1';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '1';
-					s_s1   <= REGISTER_SELECT;
-					s_s2   <= INPUT_SELECT;
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '1';
-					s_rm   <= '1';
-					s_wm   <= '0';
-					s_s3   <= MEMORY_SELECT;
-					s_wf1  <= '1';
-					-----
-				others  =>
-					---- stage 1
-					s_en1  <= '0';
-					s_rf1  <= '0';
-					s_rf2  <= '0';
-					---- stage 2
-					s_en2  <= '0';
-					s_s1   <= '0';
-					s_s2   <= '0';
-					s_alu1 <= '0';
-					s_alu2 <= '0';
-					---- stage 3
-					s_en3  <= '0';
-					s_rm   <= '0';
-					s_wm   <= '0';
-					s_s3   <= '0';
-					s_wf1  <= '0';
-					-----
-			end case;
-		end if;
+	s_rf1 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                           (OPCODE = ITYPE_ADDI2)  or
+                           (OPCODE = ITYPE_SUBI2)  or
+                           (OPCODE = ITYPE_ANDI2)  or
+                           (OPCODE = ITYPE_ORI2)   or
+                           (OPCODE = ITYPE_MOV)    or
+                           (OPCODE = ITYPE_S_MEM2) or
+                           (OPCODE = ITYPE_L_MEM2)) else '0';
 
-	end process;
+	s_rf2 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                           (OPCODE = ITYPE_ADDI1)  or
+                           (OPCODE = ITYPE_SUBI1)  or
+                           (OPCODE = ITYPE_ANDI1)  or
+                           (OPCODE = ITYPE_ORI1)   or
+                           (OPCODE = ITYPE_S_MEM2) or
+                           (OPCODE = ITYPE_L_MEM1)) else '0';
 
+	
+	--------------------------
+	------    Stage 2    -----
+	--------------------------
+	s_en2 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                           (OPCODE = ITYPE_ADDI1)  or
+                           (OPCODE = ITYPE_SUBI1)  or
+                           (OPCODE = ITYPE_ANDI1)  or
+                           (OPCODE = ITYPE_ORI1)   or
+                           (OPCODE = ITYPE_ADDI2)  or
+                           (OPCODE = ITYPE_SUBI2)  or
+                           (OPCODE = ITYPE_ANDI2)  or
+                           (OPCODE = ITYPE_ORI2)   or
+                           (OPCODE = ITYPE_MOV)    or
+                           (OPCODE = ITYPE_S_REG1) or
+                           (OPCODE = ITYPE_S_REG2) or
+                           (OPCODE = ITYPE_S_MEM2) or
+                           (OPCODE = ITYPE_L_MEM1) or
+                           (OPCODE = ITYPE_L_MEM2)) else '0';
+
+	s_s1  <= REGISTER_SELECT when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                                       (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                                       (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                                       (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                                       (OPCODE = ITYPE_ADDI2)  or
+                                       (OPCODE = ITYPE_SUBI2)  or
+                                       (OPCODE = ITYPE_ANDI2)  or
+                                       (OPCODE = ITYPE_ORI2)   or
+                                       (OPCODE = ITYPE_MOV)    or
+                                       (OPCODE = ITYPE_S_MEM2) or
+                                       (OPCODE = ITYPE_L_MEM2)) else
+
+                  INPUT_SELECT   when ((OPCODE = ITYPE_ADDI1)  or
+                                       (OPCODE = ITYPE_SUBI1)  or
+                                       (OPCODE = ITYPE_ANDI1)  or
+                                       (OPCODE = ITYPE_ORI1)   or
+                                       (OPCODE = ITYPE_S_REG1) or
+                                       (OPCODE = ITYPE_S_REG2) or
+                                       (OPCODE = ITYPE_L_MEM1)) else '0';
+
+	s_s2  <= REGISTER_SELECT when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                                       (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                                       (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                                       (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                                       (OPCODE = ITYPE_ADDI1)  or
+                                       (OPCODE = ITYPE_SUBI1)  or
+                                       (OPCODE = ITYPE_ANDI1)  or
+                                       (OPCODE = ITYPE_ORI1)   or
+                                       (OPCODE = ITYPE_L_MEM1)) else
+
+                  INPUT_SELECT   when ((OPCODE = ITYPE_ADDI2)  or
+                                       (OPCODE = ITYPE_SUBI2)  or
+                                       (OPCODE = ITYPE_ANDI2)  or
+                                       (OPCODE = ITYPE_ORI2)   or
+                                       (OPCODE = ITYPE_S_REG1) or
+                                       (OPCODE = ITYPE_S_REG2) or
+                                       (OPCODE = ITYPE_S_MEM2) or
+                                       (OPCODE = ITYPE_L_MEM2)) else '0';
+
+	s_alu1 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                            (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                            (OPCODE = ITYPE_ANDI1)  or
+                            (OPCODE = ITYPE_ORI1)   or
+                            (OPCODE = ITYPE_ANDI2)  or
+                            (OPCODE = ITYPE_ORI2)) else '0';
+
+	s_alu2 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                            (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                            (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                            (OPCODE = ITYPE_SUBI1)  or
+                            (OPCODE = ITYPE_ANDI1)  or
+                            (OPCODE = ITYPE_ORI1)   or
+                            (OPCODE = ITYPE_SUBI2)  or
+                            (OPCODE = ITYPE_ANDI2)  or
+                            (OPCODE = ITYPE_ORI2)) else '0';
+
+
+	--------------------------
+	------    Stage 3    -----
+	--------------------------
+	s_en3 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                           (OPCODE = ITYPE_ADDI1)  or
+                           (OPCODE = ITYPE_SUBI1)  or
+                           (OPCODE = ITYPE_ANDI1)  or
+                           (OPCODE = ITYPE_ORI1)   or
+                           (OPCODE = ITYPE_ADDI2)  or
+                           (OPCODE = ITYPE_SUBI2)  or
+                           (OPCODE = ITYPE_ANDI2)  or
+                           (OPCODE = ITYPE_ORI2)   or
+                           (OPCODE = ITYPE_MOV)    or
+                           (OPCODE = ITYPE_S_REG1) or
+                           (OPCODE = ITYPE_S_REG2) or
+                           (OPCODE = ITYPE_S_MEM2) or
+                           (OPCODE = ITYPE_L_MEM1) or
+                           (OPCODE = ITYPE_L_MEM2)) else '0';
+
+	s_rm  <= '1' when ((OPCODE = ITYPE_L_MEM1) or
+                           (OPCODE = ITYPE_L_MEM2)) else '0';
+
+	s_wm  <= '1' when ((OPCODE = ITYPE_S_MEM2)) else '0';
+
+	s_s3  <= ALU_OUT_SELECT when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                                      (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                                      (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                                      (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                                      (OPCODE = ITYPE_ADDI1)  or
+                                      (OPCODE = ITYPE_SUBI1)  or
+                                      (OPCODE = ITYPE_ANDI1)  or
+                                      (OPCODE = ITYPE_ORI1)   or
+                                      (OPCODE = ITYPE_ADDI2)  or
+                                      (OPCODE = ITYPE_SUBI2)  or
+                                      (OPCODE = ITYPE_ANDI2)  or
+                                      (OPCODE = ITYPE_ORI2)   or
+                                      (OPCODE = ITYPE_MOV)    or
+                                      (OPCODE = ITYPE_S_REG1) or
+                                      (OPCODE = ITYPE_S_REG2)) else
+
+                 MEMORY_SELECT  when ((OPCODE = ITYPE_S_MEM2) or
+                                      (OPCODE = ITYPE_L_MEM1) or
+                                      (OPCODE = ITYPE_L_MEM2)) else '0';
+
+	s_wf1 <= '1' when ((OPCODE = RTYPE and FUNC = RTYPE_ADD) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_SUB) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_AND) or
+                           (OPCODE = RTYPE and FUNC = RTYPE_OR)  or
+                           (OPCODE = ITYPE_ADDI1)  or
+                           (OPCODE = ITYPE_SUBI1)  or
+                           (OPCODE = ITYPE_ANDI1)  or
+                           (OPCODE = ITYPE_ORI1)   or
+                           (OPCODE = ITYPE_ADDI2)  or
+                           (OPCODE = ITYPE_SUBI2)  or
+                           (OPCODE = ITYPE_ANDI2)  or
+                           (OPCODE = ITYPE_ORI2)   or
+                           (OPCODE = ITYPE_MOV)    or
+                           (OPCODE = ITYPE_S_REG1) or
+                           (OPCODE = ITYPE_S_REG2) or
+                           (OPCODE = ITYPE_L_MEM1) or
+                           (OPCODE = ITYPE_L_MEM2)) else '0';
+
+
+	--- Signal are pipelined according to stage
 	pipeline: process (CLK, RST) is begin
 
 		if (RST = '0') then
@@ -412,7 +251,7 @@ begin
 			end if;
 		end if;
 
-	end if;
+	end process;
 
 	---- Output
 	RF1  <= s_rf1;
